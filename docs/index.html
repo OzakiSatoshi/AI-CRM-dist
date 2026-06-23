@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-CRM — SES・派遣業向け 顧客／案件管理</title>
+  <meta name="description" content="AI-CRM は名刺スキャン・顧客管理・一斉メールを備えた Windows 向けスタンドアロン CRM です。最新版をダウンロードできます。" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1 class="logo">AI-CRM</h1>
+      <p class="tagline">名刺スキャンから一斉メールまで。SES・派遣業のための、Windows スタンドアロン CRM。</p>
+      <div class="cta">
+        <!-- 最新版インストーラー（GitHub Releases の latest に常に解決される） -->
+        <a class="btn btn-primary" id="download-btn"
+           href="https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest">
+          最新版をダウンロード
+        </a>
+        <span class="version" id="version-label">最新版を確認中…</span>
+      </div>
+      <p class="sysreq">対応: Windows 10 (1809) 以降 / 64bit ・ インストール時の管理者権限不要</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="features">
+      <h2>主な機能</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>名刺スキャン (AI)</h3>
+          <p>名刺・自己紹介シート・参加者リストを Claude が解析し、顧客情報を自動登録します。</p>
+        </div>
+        <div class="card">
+          <h3>顧客・案件管理</h3>
+          <p>顧客、会社、タグ、セグメント、ランクを一元管理。重複の検出・統合にも対応。</p>
+        </div>
+        <div class="card">
+          <h3>一斉・選択メール送信</h3>
+          <p>テンプレート・添付ファイル・地域絞り込みに対応した一斉／選択メール送信。</p>
+        </div>
+        <div class="card">
+          <h3>Google 連絡先連携</h3>
+          <p>Google コンタクトと双方向同期。既存の連絡先資産をそのまま活用できます。</p>
+        </div>
+        <div class="card">
+          <h3>インポート / エクスポート</h3>
+          <p>HubSpot CSV インポート、Excel／CSV 出力に対応。データの移行も容易です。</p>
+        </div>
+        <div class="card">
+          <h3>ローカル完結・安全</h3>
+          <p>データは端末内の SQLite に保存。API キー等は Windows DPAPI で暗号化されます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="changelog">
+      <h2>変更履歴</h2>
+      <!-- リリースごとに最新を先頭へ追記する。version.json と内容を一致させる。 -->
+      <article>
+        <h3>v1.2.4</h3>
+        <ul>
+          <li>テンプレートの添付ファイルを選択メール送信へ引き継ぎ</li>
+          <li>選択メール送信に都道府県・市町村のカスケード絞り込みを追加</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 株式会社Qukuri ・ <a href="https://shikumill.com">shikumill.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // version.json から最新バージョンを読み、ダウンロードボタンとラベルを更新する。
+    // 取得できない場合は Releases の latest ページへのリンクをそのまま使う。
+    fetch('version.json', { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (!data) return;
+        var label = document.getElementById('version-label');
+        var btn = document.getElementById('download-btn');
+        if (data.version) label.textContent = '最新版 v' + data.version;
+        if (data.downloadUrl) btn.setAttribute('href', data.downloadUrl);
+      })
+      .catch(function () { /* 失敗時は既定のリンクのまま */ });
+  </script>
+</body>
+</html>

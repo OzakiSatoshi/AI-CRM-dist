@@ -1,0 +1,6 @@
+{
+  "version": "1.2.4",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.4/AI-CRM-Setup-v1.2.4.exe",
+  "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
+  "releaseNotes": "テンプレートの添付ファイル引き継ぎ、選択メール送信の地域カスケード絞り込みに対応。"
+}
