@@ -1,6 +1,6 @@
 {
-  "version": "1.2.6",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.6/AI-CRM-Setup-v1.2.6.exe",
+  "version": "1.2.7",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.7/AI-CRM-Setup-v1.2.7.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "永続ライセンス（プロダクトキー）に対応。初回30日間は試用でき、以降はキーで認証します。"
+  "releaseNotes": "プロダクトキーをPC単位で発行できるようになりました（マシン紐付け）。"
 }
