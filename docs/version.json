@@ -1,6 +1,6 @@
 {
-  "version": "1.2.7",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.7/AI-CRM-Setup-v1.2.7.exe",
+  "version": "1.2.8",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.8/AI-CRM-Setup-v1.2.8.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "プロダクトキーをPC単位で発行できるようになりました（マシン紐付け）。"
+  "releaseNotes": "プロダクトキーの入力欄を改善し、改行を含むキーを貼り付けても正しく認証できるようにしました。"
 }
