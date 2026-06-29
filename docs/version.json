@@ -1,6 +1,6 @@
 {
-  "version": "1.2.16",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.16/AI-CRM-Setup-v1.2.16.exe",
+  "version": "1.2.17",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.17/AI-CRM-Setup-v1.2.17.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "交流会などの参加者一覧（写真・PDF）の取り込みで、参加者本人の氏名と一番右端の「紹介者」欄の氏名を取り違える問題を、実際の表のレイアウトに合わせてさらに改善しました。表の列構成と氏名欄のふりがな（よみ）を手がかりに本人の氏名を正確に読み取り、一番右端の「紹介者」欄は別人として無視するようにしました。"
+  "releaseNotes": "交流会などの参加者一覧（写真・PDF）の取り込みで、本人の氏名が屋号・ニックネーム・英字・記号などの場合に紹介者の氏名を本人として登録してしまう取り違えをさらに改善しました。紹介者を本人とは別項目として読み分け、本人欄に紹介者名が混入しないようにし、「mico*」のような表記でもふりがな付きの氏名欄を本人として正しく読み取ります。"
 }
