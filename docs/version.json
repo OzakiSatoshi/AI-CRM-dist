@@ -1,6 +1,6 @@
 {
-  "version": "1.2.10",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.10/AI-CRM-Setup-v1.2.10.exe",
+  "version": "1.2.11",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.11/AI-CRM-Setup-v1.2.11.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "名刺・顧客データの取り込み画面を分かりやすく刷新しました。取り込み方法を「名刺から」「他システム・リストから」の2グループに整理し、スマホで撮った名刺の表と裏（2枚）を1人ぶんとしてまとめる取り込みと、Outlook／Gmailから書き出した連絡先CSVの取り込みに対応しました。"
+  "releaseNotes": "顧客一覧の表示カラム設定に「都道府県」「市町村」「タグ」を追加しました（初期設定では市町村を表示）。また、イベント一覧の参加者数が初回に正しく表示されず、詳細を開くまで少なく表示される不具合を修正しました。"
 }
