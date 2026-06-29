@@ -1,6 +1,6 @@
 {
-  "version": "1.2.14",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.14/AI-CRM-Setup-v1.2.14.exe",
+  "version": "1.2.15",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.15/AI-CRM-Setup-v1.2.15.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "顧客のタグを「業種」「つながりたい人」「趣味」「一般」のカテゴリ別に分けて表示するようにしました。顧客詳細画面ではカテゴリごとに見出しを付けて色分け表示し、業種タグとつながりたい人タグが一目で区別できます。タグ追加時に「業種」カテゴリも選べるようになり、顧客一覧では「業種」を独立した列に分離しました。"
+  "releaseNotes": "交流会などの参加者一覧（写真・PDF）の取り込みで、参加者本人の氏名と「紹介者」欄の氏名を取り違え、会社名と個人名が別人の組み合わせで登録されることがある不具合を改善しました。表を行ごとに正確に読み取り、紹介者の氏名を本人の氏名として取り込まないようにしました。"
 }
