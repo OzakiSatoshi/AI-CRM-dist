@@ -1,6 +1,6 @@
 {
-  "version": "1.2.12",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.12/AI-CRM-Setup-v1.2.12.exe",
+  "version": "1.2.13",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.13/AI-CRM-Setup-v1.2.13.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "交流会などの参加者一覧（写真・PDF）の取り込みで、名刺には無い「趣味」「つながりたい人」を抽出できるようにしました。趣味は「趣味」タグ、つながりたい人は「ニーズ」タグとして登録され、未登録の方は属性込みで新規登録、登録済みの方は既存情報を保ったままタグだけを差分追加します。取り込みプレビュー画面にも「趣味」「つながりたい人」の列を追加しました。"
+  "releaseNotes": "交流会などの参加者一覧（写真・PDF）で参加者が多数（30件以上）の場合に、AI読み取り結果が途中で切れて「JSON解析失敗」エラーになり取り込めない不具合を修正しました。一度に読み取れる人数を大幅に拡大し、万一さらに大人数で上限を超えた場合でも読み取れた分までは取り込めるようにしました。"
 }
