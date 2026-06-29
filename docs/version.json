@@ -1,6 +1,6 @@
 {
-  "version": "1.2.8",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.8/AI-CRM-Setup-v1.2.8.exe",
+  "version": "1.2.9",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.9/AI-CRM-Setup-v1.2.9.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "プロダクトキーの入力欄を改善し、改行を含むキーを貼り付けても正しく認証できるようにしました。"
+  "releaseNotes": "顧客一覧の並べ替えを改善しました。会社名でソートすると同じ会社がページをまたいで連続して並び、ページを移動しても並び順が解除されなくなりました。"
 }
