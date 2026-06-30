@@ -1,6 +1,6 @@
 {
-  "version": "1.2.22",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.22/AI-CRM-Setup-v1.2.22.exe",
+  "version": "1.2.23",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.23/AI-CRM-Setup-v1.2.23.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "クラウド同期（Pro/Business）の改善・修正版です。Google ドライブの保管庫検出を改善し（書き込み可能なマイドライブ配下を基点に、複数アカウントG:/H:を区別、Workspaceアカウントも検出）、フォルダ作成失敗を解消。取り込みは起動時に行うことを明示し「今すぐ同期」をロック保持の送出に変更。起動時に保管庫へ到達できない問題（仮想ドライブのマウント遅延に最大15秒リトライ）と、閉じた後に「すでに起動しています」となる問題を修正しました。"
+  "releaseNotes": "クラウド同期（Pro/Business）で、セグメントとランクのマスタ（選択肢一覧）が端末間で同期されない問題を修正しました。今後は保管庫を通じて同期されます（APIキー・SMTP・認証情報・ライセンス等の機密は引き続き同期されません）。反映には一度の同期サイクルが必要です。"
 }
