@@ -1,6 +1,6 @@
 {
-  "version": "1.2.26",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.26/AI-CRM-Setup-v1.2.26.exe",
+  "version": "1.2.27",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.27/AI-CRM-Setup-v1.2.27.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "一斉メール送信画面に「配信停止」チェックを追加。チェックした宛先は今後の一斉配信から恒久的に除外され、配信停止のご依頼にその場で対応できます。配信停止済みの宛先は送信対象から自動で除外され、画面の対象件数と実際の送信件数が一致します。あわせてアプリ全体のUIを刷新しました（Modern SaaS + Soft UI：新しいカラーパレット・柔らかい影・角丸・下線タブ）。"
+  "releaseNotes": "配信停止の操作場所を「顧客一覧」へ移しました。配信停止のご依頼が来たら、顧客一覧で名前を検索して「配信停止」列にチェックするだけで、その方を今後の一斉配信から外せます。停止中の方も一覧に表示され、チェックを外せば配信を再開できます。選択メール送信画面の受信者リストは送信対象の選択に専念できるよう配信停止列を整理しました（停止済みの方は引き続き送信対象から自動で除外されます）。"
 }
