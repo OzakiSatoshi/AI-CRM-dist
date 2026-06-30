@@ -1,6 +1,6 @@
 {
-  "version": "1.2.19",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.19/AI-CRM-Setup-v1.2.19.exe",
+  "version": "1.2.20",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.20/AI-CRM-Setup-v1.2.20.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "選択メール送信画面のタグ選択をカテゴリ別アコーディオンに刷新しました。業種・つながりたい人・趣味・一般ごとに開閉でき、タグ名検索（ヒットしたカテゴリは自動展開）とカテゴリ単位の全選択/全解除を追加。数百個のタグが並んで煩雑だった画面を大幅に整理しました。"
+  "releaseNotes": "クラウド保管・端末間同期に対応しました（Pro / Business）。お使いの OneDrive / Google ドライブ / Dropbox の同期フォルダを保管庫として複数の端末で顧客データと名刺画像を共有でき、排他ロックで1台ずつ安全に編集します。クラウドフォルダの自動検出によるかんたん設定、健全性チェック、ロックの強制解除にも対応。データはユーザー自身のクラウドにのみ保管され、ベンダーは一切預かりません。"
 }
