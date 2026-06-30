@@ -1,6 +1,6 @@
 {
-  "version": "1.2.18",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.18/AI-CRM-Setup-v1.2.18.exe",
+  "version": "1.2.19",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.19/AI-CRM-Setup-v1.2.19.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "顧客一覧のタグ絞り込みをカテゴリ別（業種・つながりたい人・趣味・一般）に拡張しました。各カテゴリで個別にタグを選択でき、複数カテゴリを同時指定するとすべての条件を満たす顧客だけに絞り込めます（AND条件）。"
+  "releaseNotes": "選択メール送信画面のタグ選択をカテゴリ別アコーディオンに刷新しました。業種・つながりたい人・趣味・一般ごとに開閉でき、タグ名検索（ヒットしたカテゴリは自動展開）とカテゴリ単位の全選択/全解除を追加。数百個のタグが並んで煩雑だった画面を大幅に整理しました。"
 }
