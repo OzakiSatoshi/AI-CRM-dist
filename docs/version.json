@@ -1,6 +1,6 @@
 {
-  "version": "1.2.20",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.20/AI-CRM-Setup-v1.2.20.exe",
+  "version": "1.2.21",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.21/AI-CRM-Setup-v1.2.21.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "クラウド保管・端末間同期に対応しました（Pro / Business）。お使いの OneDrive / Google ドライブ / Dropbox の同期フォルダを保管庫として複数の端末で顧客データと名刺画像を共有でき、排他ロックで1台ずつ安全に編集します。クラウドフォルダの自動検出によるかんたん設定、健全性チェック、ロックの強制解除にも対応。データはユーザー自身のクラウドにのみ保管され、ベンダーは一切預かりません。"
+  "releaseNotes": "ライセンス認証済みの端末で、設定「情報」タブのプロダクトキー入力欄が表示されず別のライセンスキーに切り替えられなかった問題を修正しました。「ライセンスキーを入力 / 別のキーに切り替える」から、認証済みでも新しいキーで再認証できます。"
 }
