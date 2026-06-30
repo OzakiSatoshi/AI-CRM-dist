@@ -1,6 +1,6 @@
 {
-  "version": "1.2.24",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.24/AI-CRM-Setup-v1.2.24.exe",
+  "version": "1.2.25",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.25/AI-CRM-Setup-v1.2.25.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "アプリを閉じた直後に開き直すと「すでに起動しています」と誤表示されることがある問題を改善（終了処理の完了を最大8秒待機）。また別PCとの同期で読み取り専用になった際、その端末を閉じていれば起動時ダイアログから「ロックを解除して編集モードで開く」を選べるようにしました。"
+  "releaseNotes": "クラウド同期の起動を高速化（起動時はDBのみ取得、名刺画像は表示後にバックグラウンド同期）。2台目で起動が固まり「すでに起動しています」と誤表示される問題を解消。画面上部に同期状況バーを追加し、読み取り専用時は「このPCで編集する」で切替可能に。他端末ロックの失効を約5分に短縮。設定に「複数のPCで使うときの動き」の説明を追加しました。"
 }
