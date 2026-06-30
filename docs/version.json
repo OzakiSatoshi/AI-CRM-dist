@@ -1,6 +1,6 @@
 {
-  "version": "1.2.21",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.21/AI-CRM-Setup-v1.2.21.exe",
+  "version": "1.2.22",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.22/AI-CRM-Setup-v1.2.22.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "ライセンス認証済みの端末で、設定「情報」タブのプロダクトキー入力欄が表示されず別のライセンスキーに切り替えられなかった問題を修正しました。「ライセンスキーを入力 / 別のキーに切り替える」から、認証済みでも新しいキーで再認証できます。"
+  "releaseNotes": "クラウド同期（Pro/Business）の改善・修正版です。Google ドライブの保管庫検出を改善し（書き込み可能なマイドライブ配下を基点に、複数アカウントG:/H:を区別、Workspaceアカウントも検出）、フォルダ作成失敗を解消。取り込みは起動時に行うことを明示し「今すぐ同期」をロック保持の送出に変更。起動時に保管庫へ到達できない問題（仮想ドライブのマウント遅延に最大15秒リトライ）と、閉じた後に「すでに起動しています」となる問題を修正しました。"
 }
