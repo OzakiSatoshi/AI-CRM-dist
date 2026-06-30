@@ -1,6 +1,6 @@
 {
-  "version": "1.2.25",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.25/AI-CRM-Setup-v1.2.25.exe",
+  "version": "1.2.26",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.26/AI-CRM-Setup-v1.2.26.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "クラウド同期の起動を高速化（起動時はDBのみ取得、名刺画像は表示後にバックグラウンド同期）。2台目で起動が固まり「すでに起動しています」と誤表示される問題を解消。画面上部に同期状況バーを追加し、読み取り専用時は「このPCで編集する」で切替可能に。他端末ロックの失効を約5分に短縮。設定に「複数のPCで使うときの動き」の説明を追加しました。"
+  "releaseNotes": "一斉メール送信画面に「配信停止」チェックを追加。チェックした宛先は今後の一斉配信から恒久的に除外され、配信停止のご依頼にその場で対応できます。配信停止済みの宛先は送信対象から自動で除外され、画面の対象件数と実際の送信件数が一致します。あわせてアプリ全体のUIを刷新しました（Modern SaaS + Soft UI：新しいカラーパレット・柔らかい影・角丸・下線タブ）。"
 }
