@@ -1,6 +1,6 @@
 {
-  "version": "1.2.28",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.28/AI-CRM-Setup-v1.2.28.exe",
+  "version": "1.2.29",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.2.29/AI-CRM-Setup-v1.2.29.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "顧客一覧のセグメント絞り込みで、「守成クラブ」など一覧には表示されている顧客がフィルタでは出てこないことがある不具合を修正しました。セグメント名の前後に紛れ込んだ余分な空白が原因で一致しなくなっていたもので、今後は保存時に自動で整えます。既存の顧客データも、アップデート後の初回起動時に自動でクリーンアップされます。"
+  "releaseNotes": "会社名の管理を改善しました。名刺スキャンで取り込んだ会社名も自動で会社マスタに登録・紐付けされるようになり、「会社マスタ登録済み」と「テキストのみ」の混在を防ぎます。会社マスタ画面には既存のテキスト会社名をまとめてマスタ化する「一括マスタ化」ボタンを追加。顧客編集の会社名ドロップダウンは会社名の一部を入力するだけで候補が絞り込める部分一致検索になり、未登録の会社名はその場で「＋会社マスタに登録」ボタンからワンタッチで登録できます。"
 }
