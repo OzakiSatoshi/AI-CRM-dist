@@ -1,6 +1,6 @@
 {
-  "version": "1.3.1",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.3.1/AI-CRM-Setup-v1.3.1.exe",
+  "version": "1.3.2",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.3.2/AI-CRM-Setup-v1.3.2.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "商談履歴の一覧から「＋ 新規商談」で商談を直接登録できるようになりました（顧客は検索付きドロップダウンから選択）。商談メモの入力にマークダウン入力支援（書式ツールバー・ライブプレビュー・記法早見表）を追加し、商談の詳細表示を整形表示に変更しました。"
+  "releaseNotes": "アップデート時に「アプリケーションを終了できませんでした」というエラーが表示され、インストールを進められないことがある問題を修正しました。アプリを閉じた直後でも、更新に必要なファイルを掴んだままのプロセスをインストーラーが確実に閉じるようになりました。"
 }
