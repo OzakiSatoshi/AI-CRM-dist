@@ -1,6 +1,6 @@
 {
-  "version": "1.3.12",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.3.12/AI-CRM-Setup-v1.3.12.exe",
+  "version": "1.3.13",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.3.13/AI-CRM-Setup-v1.3.13.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "同期ボタンを使いやすい位置（エクスポートの隣）へ移動して常時表示にしました。全件同期の実行時には確認画面を表示するようにし、誤操作を防ぎます。"
+  "releaseNotes": "設定画面の全タブに「この設定をすると何ができるか」を説明する情報カードを追加しました。メール送信・送信レート・送信者情報の各項目にも補足説明を追加し、はじめての方でも設定の目的が分かりやすくなりました。"
 }
