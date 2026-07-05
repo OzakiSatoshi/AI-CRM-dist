@@ -1,6 +1,6 @@
 {
-  "version": "1.3.13",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.3.13/AI-CRM-Setup-v1.3.13.exe",
+  "version": "1.3.14",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.3.14/AI-CRM-Setup-v1.3.14.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "設定画面の全タブに「この設定をすると何ができるか」を説明する情報カードを追加しました。メール送信・送信レート・送信者情報の各項目にも補足説明を追加し、はじめての方でも設定の目的が分かりやすくなりました。"
+  "releaseNotes": "バックアップから顧客データを元に戻せる「復元」機能を追加しました。復元前のデータは自動退避され、クラウド同期環境でも正しく反映されます。また設定画面の一部タブでウィンドウが小さいと下部が見切れる問題を修正しました。"
 }
