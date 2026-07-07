@@ -1,6 +1,6 @@
 {
-  "version": "1.3.16",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.3.16/AI-CRM-Setup-v1.3.16.exe",
+  "version": "1.3.17",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.3.17/AI-CRM-Setup-v1.3.17.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "連絡先同期の不具合を修正しました。Google連絡先の大量同期で発生していたエラー多発（読み取り上限超過）を自動リトライで解消し、同期中は画面をロックして進捗を表示するようにしました。同期完了までは他の操作で中断されません（Apple/iCloud同期も同様に対応）。"
+  "releaseNotes": "メール送信基盤を刷新しました。Gmail SMTP直送によるアカウント一時停止リスクを解消するため、中継サーバー経由の送信に対応（未設定の場合は従来のGmail SMTPへ自動フォールバック）。送信キューを永続化し、アプリ再起動後も未送信分から自動再開します。購読解除リンクを実際に機能するURLに変更し、1日あたりの送信上限設定も実際の送信処理に反映されるようになりました。"
 }
