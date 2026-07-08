@@ -1,6 +1,6 @@
 {
-  "version": "1.3.23",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.3.23/AI-CRM-Setup-v1.3.23.exe",
+  "version": "1.3.24",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.3.24/AI-CRM-Setup-v1.3.24.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "連絡先の同期が最後まで終わったあとも「同期しています」の画面が消えず、操作できなくなることがある不具合を修正しました（Google・iCloud共通）。"
+  "releaseNotes": "Googleコンタクト側で「重複の統合」を行った直後に同期すると、統合で削除された連絡先の更新に失敗する（失敗した顧客として表示される）不具合を修正しました。統合後の連絡先へ自動で再リンクします。"
 }
