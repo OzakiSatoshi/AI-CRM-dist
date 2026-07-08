@@ -1,6 +1,6 @@
 {
-  "version": "1.3.20",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.3.20/AI-CRM-Setup-v1.3.20.exe",
+  "version": "1.3.21",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.3.21/AI-CRM-Setup-v1.3.21.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "連絡先連携を大幅強化しました。名刺スキャン時にAIが読み仮名を自動入力し、Google・Apple連絡先への同期でスマホの電話帳が五十音順に正しく並ぶようになりました。最新の名刺画像を連絡先の写真として自動設定でき、タグはGoogleコンタクトのラベル・iCloudの連絡先グループとして同期されます。読み仮名が未入力の既存のお客様には、設定画面からAIで一括生成できます（スキャン枚数は消費しません）。"
+  "releaseNotes": "名刺・顧客データの取り込みが完了したあとに「取り込みが完了しました」の案内と「顧客一覧に戻る」ボタンを表示し、次の操作に迷わないようにしました。スキャン設定の名刺データ保存フォルダは変更するとすぐに保存されるようになり、フォルダがパソコン上に見つからない場合はその場で警告を表示します。"
 }
