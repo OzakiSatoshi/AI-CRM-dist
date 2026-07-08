@@ -1,6 +1,6 @@
 {
-  "version": "1.3.19",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.3.19/AI-CRM-Setup-v1.3.19.exe",
+  "version": "1.3.20",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v1.3.20/AI-CRM-Setup-v1.3.20.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "メール送信 (SMTP) 設定に「アプリ パスワード」の取得手順ガイドを追加しました。パスワード欄の下の折りたたみ式の説明から、Gmailの2段階認証設定・アプリ パスワード発行ページへ進め、発行から貼り付けまでの手順を番号付きで確認できます。"
+  "releaseNotes": "連絡先連携を大幅強化しました。名刺スキャン時にAIが読み仮名を自動入力し、Google・Apple連絡先への同期でスマホの電話帳が五十音順に正しく並ぶようになりました。最新の名刺画像を連絡先の写真として自動設定でき、タグはGoogleコンタクトのラベル・iCloudの連絡先グループとして同期されます。読み仮名が未入力の既存のお客様には、設定画面からAIで一括生成できます（スキャン枚数は消費しません）。"
 }
