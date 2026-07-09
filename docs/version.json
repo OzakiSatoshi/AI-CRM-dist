@@ -1,10 +1,10 @@
 {
-  "version": "2.0.0",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.0/AI-CRM-Setup-v2.0.0.exe",
+  "version": "2.0.1",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.1/AI-CRM-Setup-v2.0.1.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "アプリの画面基盤を全面刷新しました（動作の軽量化と今後のMac対応の土台）。一斉メール送信前の確認画面の追加、起動時の自動バックアップ作成など。データ・設定・ライセンスはそのまま引き継がれます。",
+  "releaseNotes": "クラウド同期が対象プラン（Pro／Business）で正しく利用できるよう修正しました。あわせて macOS 版の配布準備を進めています。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.0/AI-CRM-Setup-v2.0.0.exe" },
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.1/AI-CRM-Setup-v2.0.1.exe" },
     "mac-arm64": { "url": "" },
     "mac-x64": { "url": "" }
   }

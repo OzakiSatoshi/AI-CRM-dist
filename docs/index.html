@@ -25,6 +25,8 @@
         <a class="btn btn-primary" id="mac-x64-btn" hidden href="#">
           ダウンロード（Mac — Intel）
         </a>
+        <!-- Mac 版が未配布のときに表示する無効化ボタン（クリック不可・href なし） -->
+        <span class="btn btn-primary btn-disabled" id="mac-pending-btn" hidden>Mac版（準備中）</span>
         <span class="version" id="version-label">最新版を確認中…</span>
       </div>
       <p class="archnote" id="mac-arch-note" hidden>2021年以降に発売された Mac は「Apple Silicon」をお選びください。</p>
@@ -87,6 +89,13 @@
     <section class="changelog">
       <h2>変更履歴</h2>
       <!-- リリースごとに最新を先頭へ追記する。version.json と内容を一致させる。 -->
+      <article>
+        <h3>v2.0.1</h3>
+        <ul>
+          <li>クラウド同期が対象プラン（Pro／Business）で正しく有効化できるように修正しました（一部のライセンスで「Pro／Business プラン限定」の表示が消えず利用できなかった問題を解消）</li>
+          <li>macOS 版の配布準備を進めています（近日提供予定）</li>
+        </ul>
+      </article>
       <article>
         <h3>v2.0.0</h3>
         <ul>
@@ -526,22 +535,31 @@
           setupOtherRow('mac-arm64', macArmUrl);
           setupOtherRow('mac-x64', macX64Url);
 
-          // Mac 判定かつ mac 版が公開済みの場合のみ、プライマリを Mac 2 ボタンへ切替
-          if (detectOS() === 'mac' && (macArmUrl || macX64Url)) {
-            winBtn.hidden = true;
-            if (macArmUrl) {
-              var armBtn = document.getElementById('mac-arm64-btn');
-              armBtn.setAttribute('href', macArmUrl);
-              armBtn.hidden = false;
+          // Mac 訪問者の場合はプライマリボタンを Mac 向けへ切替
+          if (detectOS() === 'mac') {
+            if (macArmUrl || macX64Url) {
+              // mac 版が公開済み（将来）: Windows ボタンを隠して Mac 2 ボタンを表示
+              winBtn.hidden = true;
+              if (macArmUrl) {
+                var armBtn = document.getElementById('mac-arm64-btn');
+                armBtn.setAttribute('href', macArmUrl);
+                armBtn.hidden = false;
+              }
+              if (macX64Url) {
+                var x64Btn = document.getElementById('mac-x64-btn');
+                x64Btn.setAttribute('href', macX64Url);
+                x64Btn.hidden = false;
+              }
+              document.getElementById('mac-arch-note').hidden = false;
+              document.getElementById('sysreq').textContent =
+                '対応: macOS 11 (Big Sur) 以降 ・ Windows 版は「その他のダウンロード」からご利用いただけます';
+            } else {
+              // mac 版が未配布（現状）: Windows ボタンを隠して「準備中」無効化ボタンを表示
+              winBtn.hidden = true;
+              document.getElementById('mac-pending-btn').hidden = false;
+              document.getElementById('sysreq').textContent =
+                '対応: macOS 11 (Big Sur) 以降（近日提供予定） ・ Windows 版は「その他のダウンロード」からご利用いただけます';
             }
-            if (macX64Url) {
-              var x64Btn = document.getElementById('mac-x64-btn');
-              x64Btn.setAttribute('href', macX64Url);
-              x64Btn.hidden = false;
-            }
-            document.getElementById('mac-arch-note').hidden = false;
-            document.getElementById('sysreq').textContent =
-              '対応: macOS 11 (Big Sur) 以降 ・ Windows 版は「その他のダウンロード」からご利用いただけます';
           }
         })
         .catch(function () { /* 失敗時は既定のリンクのまま */ });
