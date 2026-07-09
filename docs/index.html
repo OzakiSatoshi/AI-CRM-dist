@@ -13,14 +13,22 @@
       <h1 class="logo">えにし</h1>
       <p class="tagline">〜お客様ノート〜　名刺スキャンから一斉メールまで。お客様とのご縁を記録する、Windows で使えるお客様管理ソフト。</p>
       <div class="cta">
-        <!-- 最新版インストーラー（GitHub Releases の latest に常に解決される） -->
+        <!-- Windows 用プライマリボタン（GitHub Releases の latest に常に解決される） -->
         <a class="btn btn-primary" id="download-btn"
            href="https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest">
           最新版をダウンロード
         </a>
+        <!-- Mac 用プライマリボタン群。version.json の downloads.mac-* に URL が入るまで非表示（データ駆動） -->
+        <a class="btn btn-primary" id="mac-arm64-btn" hidden href="#">
+          ダウンロード（Mac — Apple Silicon）
+        </a>
+        <a class="btn btn-primary" id="mac-x64-btn" hidden href="#">
+          ダウンロード（Mac — Intel）
+        </a>
         <span class="version" id="version-label">最新版を確認中…</span>
       </div>
-      <p class="sysreq">対応: Windows 10 (1809) 以降 / 64bit ・ インストール時の管理者権限不要</p>
+      <p class="archnote" id="mac-arch-note" hidden>2021年以降に発売された Mac は「Apple Silicon」をお選びください。</p>
+      <p class="sysreq" id="sysreq">対応: Windows 10 (1809) 以降 / 64bit ・ インストール時の管理者権限不要</p>
     </div>
   </header>
 
@@ -55,9 +63,39 @@
       </div>
     </section>
 
+    <section class="downloads" id="other-downloads">
+      <h2>その他のダウンロード</h2>
+      <ul class="dl-list">
+        <li>
+          <strong>Windows 版</strong>（Windows 10 (1809) 以降 / 64bit）:
+          <a id="dl-win" href="https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest">ダウンロード</a>
+        </li>
+        <li>
+          <strong>macOS 版 — Apple Silicon</strong>（macOS 11 (Big Sur) 以降）:
+          <a id="dl-mac-arm64" hidden href="#">ダウンロード</a>
+          <span id="dl-mac-arm64-pending" class="pending">準備中</span>
+        </li>
+        <li>
+          <strong>macOS 版 — Intel</strong>（macOS 11 (Big Sur) 以降）:
+          <a id="dl-mac-x64" hidden href="#">ダウンロード</a>
+          <span id="dl-mac-x64-pending" class="pending">準備中</span>
+        </li>
+      </ul>
+      <p class="dl-note">macOS 版は macOS 11 (Big Sur) 以降に対応します。2021年以降に発売された Mac は Apple Silicon 版をお選びください。</p>
+    </section>
+
     <section class="changelog">
       <h2>変更履歴</h2>
       <!-- リリースごとに最新を先頭へ追記する。version.json と内容を一致させる。 -->
+      <article>
+        <h3>v2.0.0</h3>
+        <ul>
+          <li>アプリの画面基盤を全面刷新しました（新しいデザインエンジンを採用。動作の軽量化と、今後のMac対応の土台になります）</li>
+          <li>一斉メール送信の前に確認画面を表示するようにしました（誤送信防止）</li>
+          <li>初回起動時に既存データの自動バックアップを作成するようにしました</li>
+          <li>細かな不具合の修正と安定性の向上。アップグレードはインストーラーを実行するだけで完了し、お客様データ・設定・ライセンスはそのまま引き継がれます</li>
+        </ul>
+      </article>
       <article>
         <h3>v1.3.24</h3>
         <ul>
@@ -435,18 +473,79 @@
   </footer>
 
   <script>
-    // version.json から最新バージョンを読み、ダウンロードボタンとラベルを更新する。
-    // 取得できない場合は Releases の latest ページへのリンクをそのまま使う。
-    fetch('version.json', { cache: 'no-store' })
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (data) {
-        if (!data) return;
-        var label = document.getElementById('version-label');
-        var btn = document.getElementById('download-btn');
-        if (data.version) label.textContent = '最新版 v' + data.version;
-        if (data.downloadUrl) btn.setAttribute('href', data.downloadUrl);
-      })
-      .catch(function () { /* 失敗時は既定のリンクのまま */ });
+    // version.json から最新バージョンを読み、OS 判定でプライマリボタンを出し分ける。
+    // - Windows（既定）: 従来どおり downloadUrl（.exe）のボタン 1 つ
+    // - Mac: downloads.mac-arm64 / mac-x64 に URL が入っている場合のみ 2 ボタン表示（データ駆動）。
+    //   ブラウザからは Apple Silicon / Intel を判別できないため 2 ボタン併記＋注記を出す。
+    // - 取得できない場合は Releases の latest ページへのリンクをそのまま使う。
+    (function () {
+      // テスト・確認用に ?os=mac / ?os=win で判定を上書きできる
+      function detectOS() {
+        var forced = new URLSearchParams(window.location.search).get('os');
+        if (forced === 'mac' || forced === 'win') return forced;
+        var platform = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || '';
+        var ua = navigator.userAgent || '';
+        return (/mac/i.test(platform) || /Macintosh|Mac OS X/i.test(ua)) ? 'mac' : 'win';
+      }
+
+      function downloadUrlOf(data, key) {
+        return (data.downloads && data.downloads[key] && data.downloads[key].url) || '';
+      }
+
+      // 「その他のダウンロード」欄: URL があればリンク、無ければ「準備中」を表示（行は常設）
+      function setupOtherRow(key, url) {
+        var link = document.getElementById('dl-' + key);
+        var pending = document.getElementById('dl-' + key + '-pending');
+        if (url) {
+          link.setAttribute('href', url);
+          link.hidden = false;
+          pending.hidden = true;
+        } else {
+          link.hidden = true;
+          pending.hidden = false;
+        }
+      }
+
+      fetch('version.json', { cache: 'no-store' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (data) {
+          if (!data) return;
+          if (data.version) {
+            document.getElementById('version-label').textContent = '最新版 v' + data.version;
+          }
+
+          var winBtn = document.getElementById('download-btn');
+          var winUrl = downloadUrlOf(data, 'win') || data.downloadUrl || '';
+          if (winUrl) {
+            winBtn.setAttribute('href', winUrl);
+            document.getElementById('dl-win').setAttribute('href', winUrl);
+          }
+
+          var macArmUrl = downloadUrlOf(data, 'mac-arm64');
+          var macX64Url = downloadUrlOf(data, 'mac-x64');
+          setupOtherRow('mac-arm64', macArmUrl);
+          setupOtherRow('mac-x64', macX64Url);
+
+          // Mac 判定かつ mac 版が公開済みの場合のみ、プライマリを Mac 2 ボタンへ切替
+          if (detectOS() === 'mac' && (macArmUrl || macX64Url)) {
+            winBtn.hidden = true;
+            if (macArmUrl) {
+              var armBtn = document.getElementById('mac-arm64-btn');
+              armBtn.setAttribute('href', macArmUrl);
+              armBtn.hidden = false;
+            }
+            if (macX64Url) {
+              var x64Btn = document.getElementById('mac-x64-btn');
+              x64Btn.setAttribute('href', macX64Url);
+              x64Btn.hidden = false;
+            }
+            document.getElementById('mac-arch-note').hidden = false;
+            document.getElementById('sysreq').textContent =
+              '対応: macOS 11 (Big Sur) 以降 ・ Windows 版は「その他のダウンロード」からご利用いただけます';
+          }
+        })
+        .catch(function () { /* 失敗時は既定のリンクのまま */ });
+    })();
   </script>
 </body>
 </html>
