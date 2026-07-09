@@ -1,10 +1,10 @@
 {
-  "version": "2.0.1",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.1/AI-CRM-Setup-v2.0.1.exe",
+  "version": "2.0.2",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.2/AI-CRM-Setup-v2.0.2.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "クラウド同期が対象プラン（Pro／Business）で正しく利用できるよう修正しました。あわせて macOS 版の配布準備を進めています。",
+  "releaseNotes": "顧客詳細画面のタブを見やすく整え、タブを切り替えても会社名・お名前が常に表示されるようにしました。連絡先の同期では、全件の処理後に「保存中」の案内を表示し、完了間際に止まって見える問題を解消しました。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.1/AI-CRM-Setup-v2.0.1.exe" },
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.2/AI-CRM-Setup-v2.0.2.exe" },
     "mac-arm64": { "url": "" },
     "mac-x64": { "url": "" }
   }
