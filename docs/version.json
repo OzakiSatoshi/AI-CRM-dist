@@ -1,10 +1,10 @@
 {
-  "version": "2.0.2",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.2/AI-CRM-Setup-v2.0.2.exe",
+  "version": "2.0.3",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.3/AI-CRM-Setup-v2.0.3.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "顧客詳細画面のタブを見やすく整え、タブを切り替えても会社名・お名前が常に表示されるようにしました。連絡先の同期では、全件の処理後に「保存中」の案内を表示し、完了間際に止まって見える問題を解消しました。",
+  "releaseNotes": "名刺・顧客データの取り込みの最終ステップで、ボタンが二重に並んで迷う問題を解消し、操作を分かりやすく整えました。顧客一覧のフィルタでは、絞り込みドロップダウンの幅を一定に固定し、長い項目名はマウスを合わせると全文がヒントで表示されるようにしました。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.2/AI-CRM-Setup-v2.0.2.exe" },
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.3/AI-CRM-Setup-v2.0.3.exe" },
     "mac-arm64": { "url": "" },
     "mac-x64": { "url": "" }
   }
