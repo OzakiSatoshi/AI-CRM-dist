@@ -1,10 +1,10 @@
 {
-  "version": "2.0.4",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.4/AI-CRM-Setup-v2.0.4.exe",
+  "version": "2.0.5",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.5/AI-CRM-Setup-v2.0.5.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "設定の「情報」タブから、ご契約時の決済メールアドレス宛に確認コードを送り、本人確認のうえ発行済みのライセンスキーを自動で受け取れるようになりました。キーの控えが見当たらないときも、メールを探さずに再設定できます。あわせて、未契約の場合は「サブスクのお申し込み・管理」ボタンからお申し込みページへご案内するようにしました。",
+  "releaseNotes": "ご契約中の方が設定画面の「サブスクリプションを管理する」を押したとき、解約・プラン変更・支払い方法の更新・領収書の確認を行う決済サービス（Stripe）の管理画面が正しく開くようになりました。あわせて、未契約の状態ではお申し込みのご案内を表示するよう整えました。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.4/AI-CRM-Setup-v2.0.4.exe" },
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.5/AI-CRM-Setup-v2.0.5.exe" },
     "mac-arm64": { "url": "" },
     "mac-x64": { "url": "" }
   }
