@@ -530,6 +530,32 @@
         return (data.downloads && data.downloads[key] && data.downloads[key].url) || '';
       }
 
+      // ?ref=rsl_xxx（紹介元パートナー）の取得と正規化。
+      // trim + 小文字化するのは、申込ページ（enishi.shikumill.com/signup）や
+      // インストーラー installer\AI-CRM.iss と同じ方針。reseller_id は小文字hex 固定なので、
+      // リンクがどこかで大文字化されても取りこぼさない（正規化しないと「無音で報酬が付かない」事故になる）。
+      // 形式の正の定義は src\AI-CRM.Core\Services\ReferralSettings.IsValidResellerId。
+      // 形式が違うものはここで捨てる（後段の resellers 照合まで持ち込まない）。
+      function referralIdFromQuery() {
+        var raw = new URLSearchParams(window.location.search).get('ref');
+        var ref = raw ? raw.trim().toLowerCase() : '';
+        return /^rsl_[0-9a-f]{12}$/.test(ref) ? ref : '';
+      }
+
+      // 通常版の URL を、そのパートナー専用インストーラーの URL へ差し替える。
+      //   .../AI-CRM-Setup-v2.0.5.exe → .../AI-CRM-Setup-v2.0.5-rsl_xxxxxxxxxxxx.exe
+      //
+      // version.json の `resellers` に載っている ID のときだけ差し替える。
+      // この配列は「そのバージョンの専用 exe を GitHub Releases へ実際に上げ済みの ID」だけを
+      // 列挙したホワイトリストで、載っていない ID を組み立てると 404 になる。
+      // 判断に迷ったら通常版へ倒す — 帰属が消えるのは痛いが、ダウンロードが 404 になるほうが害が大きい。
+      function partnerDownloadUrl(data, url, ref) {
+        var whitelist = (data && data.resellers) || [];
+        if (!ref || whitelist.indexOf(ref) < 0) return url;
+        // 末尾 .exe の直前にだけ挿入する（パスの途中に .exe を含む URL を壊さない）
+        return /\.exe$/i.test(url) ? url.replace(/\.exe$/i, '-' + ref + '.exe') : url;
+      }
+
       // 「その他のダウンロード」欄: URL があればリンク、無ければ「準備中」を表示（行は常設）
       function setupOtherRow(key, url) {
         var link = document.getElementById('dl-' + key);
@@ -555,10 +581,17 @@
           var winBtn = document.getElementById('download-btn');
           var winUrl = downloadUrlOf(data, 'win') || data.downloadUrl || '';
           if (winUrl) {
+            // 紹介元が解決できた場合のみパートナー専用 exe を掴ませる。
+            // ファイル名に reseller_id が入っていることがインストール時の記録条件で、
+            // Free で使い始めたお客様が後日有料化したときの帰属はこれだけが頼り。
+            winUrl = partnerDownloadUrl(data, winUrl, referralIdFromQuery());
             winBtn.setAttribute('href', winUrl);
             document.getElementById('dl-win').setAttribute('href', winUrl);
           }
 
+          // Mac は対象外。ファイル名による紹介元の記録は installer\AI-CRM.iss（Windows 専用）の
+          // 仕組みで、macOS 側には現状これに相当する受け皿が無い。専用ファイル名を作っても
+          // 誰も読まないため、Mac のボタンは書き換えない。
           var macArmUrl = downloadUrlOf(data, 'mac-arm64');
           var macX64Url = downloadUrlOf(data, 'mac-x64');
           setupOtherRow('mac-arm64', macArmUrl);

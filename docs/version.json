@@ -3,6 +3,7 @@
   "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.5/AI-CRM-Setup-v2.0.5.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
   "releaseNotes": "ご契約中の方が設定画面の「サブスクリプションを管理する」を押したとき、解約・プラン変更・支払い方法の更新・領収書の確認を行う決済サービス（Stripe）の管理画面が正しく開くようになりました。あわせて、未契約の状態ではお申し込みのご案内を表示するよう整えました。",
+  "resellers": ["rsl_3c4fb4c3ad5e"],
   "downloads": {
     "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.0.5/AI-CRM-Setup-v2.0.5.exe" },
     "mac-arm64": { "url": "" },
