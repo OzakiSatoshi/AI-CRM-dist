@@ -564,17 +564,19 @@
       }
 
       // 通常版の URL を、そのパートナー専用インストーラーの URL へ差し替える。
-      //   .../AI-CRM-Setup-v2.0.5.exe → .../AI-CRM-Setup-v2.0.5-rsl_xxxxxxxxxxxx.exe
       //
-      // version.json の `resellers` に載っている ID のときだけ差し替える。
-      // この配列は「そのバージョンの専用 exe を GitHub Releases へ実際に上げ済みの ID」だけを
-      // 列挙したホワイトリストで、載っていない ID を組み立てると 404 になる。
-      // 判断に迷ったら通常版へ倒す — 帰属が消えるのは痛いが、ダウンロードが 404 になるほうが害が大きい。
+      // パートナー版は中身が通常版と同一だが、ファイル名の紹介コードから referral.txt を書き出す。
+      // これが**自動更新に混ざると全利用者が誤帰属する**ため、パートナー版は releases/latest に
+      // 出ない**専用の prerelease** に置く。したがってここでは version.json の `resellerDownloads`
+      //（reseller_id → その prerelease 上の専用 exe の絶対 URL）を**明示で引くだけ**にする。
+      //
+      // 以前は通常版 URL の末尾 .exe を置換して組み立てていたが、それは latest リリースのパスに
+      // 依存し、自動更新用アセットと同居する温床だった。名前を組み立てず、上げ済みの URL を引く。
+      // 明示 URL が無い ID は通常版へ倒す（帰属は消えるが 404 より害が小さい）。
       function partnerDownloadUrl(data, url, ref) {
-        var whitelist = (data && data.resellers) || [];
-        if (!ref || whitelist.indexOf(ref) < 0) return url;
-        // 末尾 .exe の直前にだけ挿入する（パスの途中に .exe を含む URL を壊さない）
-        return /\.exe$/i.test(url) ? url.replace(/\.exe$/i, '-' + ref + '.exe') : url;
+        if (!ref) return url;
+        var map = (data && data.resellerDownloads) || {};
+        return (Object.prototype.hasOwnProperty.call(map, ref) && map[ref]) ? map[ref] : url;
       }
 
       // 「その他のダウンロード」欄: URL があればリンク、無ければ「準備中」を表示（行は常設）
