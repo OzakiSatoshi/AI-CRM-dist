@@ -1,11 +1,11 @@
 {
-  "version": "2.2.0",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.0/AI-CRM-Setup-v2.2.0.exe",
+  "version": "2.2.1",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.1/AI-CRM-Setup-v2.2.1.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "両面（表・裏）のある名刺を読み取るとき、表と裏をまとめて1回で読み取り、スキャン枚数の消費が1枚で済むようになりました（これまでは表と裏で2枚ぶん数えていました）。あわせて、名刺を取り込む画面を整理し、写真から取り込む方法を選びやすくしました。",
+  "releaseNotes": "内部的な不具合の修正と安定性の向上を行いました。",
   "resellers": ["rsl_3c4fb4c3ad5e"],
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.0/AI-CRM-Setup-v2.2.0.exe" },
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.1/AI-CRM-Setup-v2.2.1.exe" },
     "mac-arm64": { "url": "" },
     "mac-x64": { "url": "" }
   }
