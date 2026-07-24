@@ -1,11 +1,11 @@
 {
-  "version": "2.1.0",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.1.0/AI-CRM-Setup-v2.1.0.exe",
+  "version": "2.2.0",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.0/AI-CRM-Setup-v2.2.0.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "名刺の読み取り中に通信が途切れて再試行になった場合でも、同じ名刺の枚数が二重に数えられないようにしました。スキャン枚数に上限のないプランをご利用の方にも、今月のスキャン枚数が画面上部に表示されるようになりました。あわせて、今後のスマートフォン連携に向けた受け入れ準備を内部的に行っています。",
+  "releaseNotes": "両面（表・裏）のある名刺を読み取るとき、表と裏をまとめて1回で読み取り、スキャン枚数の消費が1枚で済むようになりました（これまでは表と裏で2枚ぶん数えていました）。あわせて、名刺を取り込む画面を整理し、写真から取り込む方法を選びやすくしました。",
   "resellers": ["rsl_3c4fb4c3ad5e"],
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.1.0/AI-CRM-Setup-v2.1.0.exe" },
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.0/AI-CRM-Setup-v2.2.0.exe" },
     "mac-arm64": { "url": "" },
     "mac-x64": { "url": "" }
   }
