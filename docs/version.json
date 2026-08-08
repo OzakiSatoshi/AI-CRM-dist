@@ -1,14 +1,14 @@
 {
-  "version": "2.2.3",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.3/AI-CRM-Setup-v2.2.3.exe",
+  "version": "2.2.4",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.4/AI-CRM-Setup-v2.2.4.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "タグ名正規化・業種2層化・タグ管理画面を追加",
+  "releaseNotes": "マイグレーション修復（v2.2.3の不具合修正）",
   "resellers": ["rsl_3c4fb4c3ad5e"],
   "resellerDownloads": {
-    "rsl_3c4fb4c3ad5e": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/partner-installers/AI-CRM-Setup-v2.2.3-rsl_3c4fb4c3ad5e.exe"
+    "rsl_3c4fb4c3ad5e": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/partner-installers/AI-CRM-Setup-v2.2.4-rsl_3c4fb4c3ad5e.exe"
   },
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.3/AI-CRM-Setup-v2.2.3.exe" },
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.4/AI-CRM-Setup-v2.2.4.exe" },
     "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.2/Enishi-v2.2.2-mac-arm64.dmg" },
     "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.2/Enishi-v2.2.2-mac-x64.dmg" }
   }
