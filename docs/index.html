@@ -40,7 +40,7 @@
       <div class="grid">
         <div class="card">
           <h3>名刺スキャン (AI)</h3>
-          <p>名刺・自己紹介シート・参加者リストを Claude が解析し、顧客情報を自動登録します。</p>
+          <p>名刺・自己紹介シート・参加者リストを Claude が解析し、顧客情報を自動登録します。<a href="#mobile-app">スマホアプリ</a>で撮った名刺も自動で届きます。</p>
         </div>
         <div class="card">
           <h3>顧客・案件管理</h3>
@@ -86,9 +86,39 @@
       <p class="dl-note">macOS 版は macOS 11 (Big Sur) 以降に対応します。2021年以降に発売された Mac は Apple Silicon 版をお選びください。</p>
     </section>
 
+    <!-- スマホアプリ「えにしモバイル」。
+         Android 版のみ公開済み（Google Play・日本のみ）。iPhone 版は未公開のため
+         リンクを出さず「準備中」と表示する（公開されたらリンクへ差し替える）。 -->
+    <section class="downloads" id="mobile-app">
+      <h2>スマホアプリ「えにしモバイル」</h2>
+      <!-- 「単体では使えない」と書かないこと。撮影・補正・利用者自身の Google ドライブへの
+           保存はアプリだけで完結し（初回ウィザードの「パソコンとつなぐ」は飛ばせる）、
+           パソコン版が要るのは取り込み＝顧客情報になる部分だけである。
+           出典: enishi-mobile implementation-status.md §4.17-3。 -->
+      <p class="dl-note">スマホのカメラで名刺を撮ると、パソコンの「えにし」へ自動で届きます。名刺をためてから机で読み取る手間がなくなります。パソコン版「えにし」と組み合わせると、撮った名刺がそのまま顧客情報として取り込まれます（パソコン版 v2.2.1 以降）。パソコン版が無くても、名刺の撮影とご自身の Google ドライブへの保存は行えます。</p>
+      <ul class="dl-list">
+        <li>
+          <strong>Android 版</strong>（Android 8.0 以降）:
+          <a href="https://play.google.com/store/apps/details?id=com.shikumill.enishi_mobile">Google Play で入手</a>
+        </li>
+        <li>
+          <strong>iPhone 版</strong>:
+          <span class="pending">準備中</span>
+        </li>
+      </ul>
+    </section>
+
     <section class="changelog">
       <h2>変更履歴</h2>
       <!-- リリースごとに最新を先頭へ追記する。version.json と内容を一致させる。 -->
+      <article>
+        <h3>v2.2.3</h3>
+        <ul>
+          <li>タグの表記ゆれ（全角/半角・大小文字など）を自動で統合するようになりました</li>
+          <li>業種タグに大分類（IT・通信、製造、士業など19分類）を追加し、絞り込みが便利になりました</li>
+          <li>設定画面に「タグ管理」を追加しました。タグの改名・統合・削除ができます</li>
+        </ul>
+      </article>
       <article>
         <h3>v2.2.2</h3>
         <ul>
