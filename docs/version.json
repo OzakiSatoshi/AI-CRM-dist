@@ -1,23 +1,15 @@
 {
-  "version": "2.2.9",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.9/AI-CRM-Setup-v2.2.9.exe",
+  "version": "2.2.10",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.10/AI-CRM-Setup-v2.2.10.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "画面整理・フィルタ折りたたみ・ヘルプツールチップ追加",
-  "resellers": [
-    "rsl_3c4fb4c3ad5e"
-  ],
+  "releaseNotes": "えにしモバイルで付けたイベント情報（イベント名・場所・出会った日付・タグ）を、名刺の取り込み時にPC版の「イベント」として保存するようになりました。あわせて名刺1枚の削除でデータベースの記録も正しく削除されるよう修正しました。",
+  "resellers": ["rsl_3c4fb4c3ad5e"],
   "resellerDownloads": {
-    "rsl_3c4fb4c3ad5e": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.9/AI-CRM-Setup-v2.2.9-rsl_3c4fb4c3ad5e.exe"
+    "rsl_3c4fb4c3ad5e": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/partner-installers/AI-CRM-Setup-v2.2.10-rsl_3c4fb4c3ad5e.exe"
   },
   "downloads": {
-    "win": {
-      "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.9/AI-CRM-Setup-v2.2.9.exe"
-    },
-    "mac-arm64": {
-      "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.2/Enishi-v2.2.2-mac-arm64.dmg"
-    },
-    "mac-x64": {
-      "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.2/Enishi-v2.2.2-mac-x64.dmg"
-    }
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.10/AI-CRM-Setup-v2.2.10.exe" },
+    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.10/Enishi-v2.2.10-mac-arm64.dmg" },
+    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.10/Enishi-v2.2.10-mac-x64.dmg" }
   }
 }
