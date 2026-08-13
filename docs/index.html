@@ -3,113 +3,186 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>えにし 〜お客様ノート〜 — 名刺スキャン・顧客管理・一斉メール</title>
+  <title>ダウンロード ｜ えにし 〜お客様ノート〜</title>
   <meta name="description" content="えにし（お客様ノート）は名刺スキャン・顧客管理・一斉メールを備えた、Windows で使えるお客様管理ソフトです。最新版をダウンロードできます。" />
+  <!-- 本家 enishi.shikumill.com と同じ書体。読み込めない環境では :root のフォールバック（明朝／ゴシック）に落ちる。 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&display=swap" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header class="hero">
-    <div class="container">
-      <h1 class="logo">えにし</h1>
-      <p class="tagline">〜お客様ノート〜　名刺スキャンから一斉メールまで。お客様とのご縁を記録する、Windows で使えるお客様管理ソフト。</p>
-      <div class="cta">
-        <!-- Windows 用プライマリボタン（GitHub Releases の latest に常に解決される） -->
-        <a class="btn btn-primary" id="download-btn"
-           href="https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest">
-          最新版をダウンロード
-        </a>
-        <!-- Mac 用プライマリボタン群。version.json の downloads.mac-* に URL が入るまで非表示（データ駆動） -->
-        <a class="btn btn-primary" id="mac-arm64-btn" hidden href="#">
-          ダウンロード（Mac — Apple Silicon）
-        </a>
-        <a class="btn btn-primary" id="mac-x64-btn" hidden href="#">
-          ダウンロード（Mac — Intel）
-        </a>
-        <!-- Mac 版が未配布のときに表示する無効化ボタン（クリック不可・href なし） -->
-        <span class="btn btn-primary btn-disabled" id="mac-pending-btn" hidden>Mac版（準備中）</span>
-        <span class="version" id="version-label">最新版を確認中…</span>
-      </div>
-      <p class="archnote" id="mac-arch-note" hidden>2021年以降に発売された Mac は「Apple Silicon」をお選びください。</p>
-      <p class="sysreq" id="sysreq">対応: Windows 10 (1809) 以降 / 64bit ・ インストール時の管理者権限不要</p>
-    </div>
+<body class="page">
+  <!-- ヘッダー／フッターは enishi.shikumill.com と同じ骨格・同じワードマークを用いる。
+       本家へ戻るリンクには data-ref を付け、?ref= を引き継がせる（下部スクリプト参照）。 -->
+  <header class="header">
+    <nav class="nav container" aria-label="グローバルナビゲーション">
+      <a href="https://enishi.shikumill.com/" class="wordmark" data-ref aria-label="えにし 〜お客様ノート〜 ホームへ">
+        <span class="wordmark__name">えにし</span>
+        <span class="wordmark__sub">〜お客様ノート〜</span>
+      </a>
+      <ul class="nav__list" role="list">
+        <li class="nav__item"><a href="#features" class="nav__link">特長</a></li>
+        <li class="nav__item"><a href="#other-downloads" class="nav__link">ダウンロード</a></li>
+        <li class="nav__item"><a href="#changelog" class="nav__link">変更履歴</a></li>
+        <li class="nav__item"><a href="https://enishi.shikumill.com/signup" class="nav__link" data-ref>お申し込み</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="container">
-    <section class="features">
-      <h2>主な機能</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>名刺スキャン (AI)</h3>
-          <p>名刺・自己紹介シート・参加者リストを Claude が解析し、顧客情報を自動登録します。<a href="#mobile-app">スマホアプリ</a>で撮った名刺も自動で届きます。</p>
-        </div>
-        <div class="card">
-          <h3>顧客・案件管理</h3>
-          <p>顧客、会社、タグ、セグメント、ランクを一元管理。重複の検出・統合にも対応。</p>
-        </div>
-        <div class="card">
-          <h3>一斉・選択メール送信</h3>
-          <p>テンプレート・添付ファイル・地域絞り込みに対応した一斉／選択メール送信。</p>
-        </div>
-        <div class="card">
-          <h3>Google 連絡先連携</h3>
-          <p>Google コンタクトと双方向同期。既存の連絡先資産をそのまま活用できます。</p>
-        </div>
-        <div class="card">
-          <h3>インポート / エクスポート</h3>
-          <p>HubSpot CSV インポート、Excel／CSV 出力に対応。データの移行も容易です。</p>
-        </div>
-        <div class="card">
-          <h3>ローカル完結・安全</h3>
-          <p>データは端末内の SQLite に保存。API キー等は Windows DPAPI で暗号化されます。</p>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__inner">
+          <p class="eyebrow">Download</p>
+          <h1 class="hero__title">名刺から、<br />人とのご縁を育てる。</h1>
+          <p class="hero__description">
+            名刺スキャンから顧客フォローの一斉メールまで。
+            お客様とのご縁を記録する、パソコン向けのお客様ノートです。
+          </p>
+          <div class="hero__cta">
+            <!-- Windows 用プライマリボタン（GitHub Releases の latest に常に解決される） -->
+            <a class="btn btn--primary btn--lg" id="download-btn"
+               href="https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest">
+              最新版をダウンロード
+            </a>
+            <!-- Mac 用プライマリボタン群。version.json の downloads.mac-* に URL が入るまで非表示（データ駆動） -->
+            <a class="btn btn--primary btn--lg" id="mac-arm64-btn" hidden href="#">
+              ダウンロード（Mac — Apple Silicon）
+            </a>
+            <a class="btn btn--primary btn--lg" id="mac-x64-btn" hidden href="#">
+              ダウンロード（Mac — Intel）
+            </a>
+            <!-- Mac 版が未配布のときに表示する無効化ボタン（クリック不可・href なし） -->
+            <span class="btn btn--primary btn--lg btn--disabled" id="mac-pending-btn" hidden>Mac版（準備中）</span>
+            <span class="version" id="version-label">最新版を確認中…</span>
+          </div>
+          <p class="hero__note" id="mac-arch-note" hidden>2021年以降に発売された Mac は「Apple Silicon」をお選びください。</p>
+          <div class="hero__badges">
+            <span class="badge" id="sysreq">Windows 10 (1809) 以降 / 64bit</span>
+            <!-- 管理者権限の話は Windows インストーラー固有。Mac 訪問者には出さない（下部スクリプト） -->
+            <span class="badge" id="badge-no-admin">インストールに管理者権限は不要</span>
+            <span class="badge">無料の Free プランあり</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="downloads" id="other-downloads">
-      <h2>その他のダウンロード</h2>
-      <ul class="dl-list">
-        <li>
-          <strong>Windows 版</strong>（Windows 10 (1809) 以降 / 64bit）:
-          <a id="dl-win" href="https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest">ダウンロード</a>
-        </li>
-        <li>
-          <strong>macOS 版 — Apple Silicon</strong>（macOS 11 (Big Sur) 以降）:
-          <a id="dl-mac-arm64" hidden href="#">ダウンロード</a>
-          <span id="dl-mac-arm64-pending" class="pending">準備中</span>
-        </li>
-        <li>
-          <strong>macOS 版 — Intel</strong>（macOS 11 (Big Sur) 以降）:
-          <a id="dl-mac-x64" hidden href="#">ダウンロード</a>
-          <span id="dl-mac-x64-pending" class="pending">準備中</span>
-        </li>
-      </ul>
-      <p class="dl-note">macOS 版は macOS 11 (Big Sur) 以降に対応します。2021年以降に発売された Mac は Apple Silicon 版をお選びください。</p>
+    <section class="section section--surface" id="features">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Features</p>
+          <h2>主な機能</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <p class="meta-num">01 / 06</p>
+            <div class="rule"></div>
+            <h3>名刺スキャン (AI)</h3>
+            <p class="muted">名刺・自己紹介シート・参加者リストを AI が解析し、顧客情報を自動登録します。<a href="#mobile-app">スマホアプリ</a>で撮った名刺も自動で届きます。</p>
+          </article>
+          <article class="card">
+            <p class="meta-num">02 / 06</p>
+            <div class="rule"></div>
+            <h3>顧客・案件管理</h3>
+            <p class="muted">顧客、会社、タグ、分類、重要度を一元管理。重複の検出・統合にも対応します。</p>
+          </article>
+          <article class="card">
+            <p class="meta-num">03 / 06</p>
+            <div class="rule"></div>
+            <h3>一斉・選択メール送信</h3>
+            <p class="muted">定型文・添付ファイル・地域絞り込みに対応した一斉／選択メール送信。</p>
+          </article>
+          <article class="card">
+            <p class="meta-num">04 / 06</p>
+            <div class="rule"></div>
+            <h3>Google・Apple 連絡先連携</h3>
+            <p class="muted">スマートフォンの連絡先と双方向に同期。既存の連絡先資産をそのまま活かせます。</p>
+          </article>
+          <article class="card">
+            <p class="meta-num">05 / 06</p>
+            <div class="rule"></div>
+            <h3>インポート / エクスポート</h3>
+            <p class="muted">HubSpot CSV の取り込み、Excel／CSV への書き出しに対応。データの移行も容易です。</p>
+          </article>
+          <article class="card">
+            <p class="meta-num">06 / 06</p>
+            <div class="rule"></div>
+            <h3>データはお手元に</h3>
+            <p class="muted">顧客データは端末内に保存され、当社は保存しません。API キー等は端末の暗号化領域で保護されます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="other-downloads">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Downloads</p>
+          <h2>その他のダウンロード</h2>
+        </div>
+        <ul class="dl-list" role="list">
+          <li>
+            <span class="dl-list__name">Windows 版
+              <span class="dl-list__req">Windows 10 (1809) 以降 / 64bit</span>
+            </span>
+            <a id="dl-win" href="https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest">ダウンロード →</a>
+          </li>
+          <li>
+            <span class="dl-list__name">macOS 版 — Apple Silicon
+              <span class="dl-list__req">macOS 11 (Big Sur) 以降</span>
+            </span>
+            <a id="dl-mac-arm64" hidden href="#">ダウンロード →</a>
+            <span id="dl-mac-arm64-pending" class="pending">準備中</span>
+          </li>
+          <li>
+            <span class="dl-list__name">macOS 版 — Intel
+              <span class="dl-list__req">macOS 11 (Big Sur) 以降</span>
+            </span>
+            <a id="dl-mac-x64" hidden href="#">ダウンロード →</a>
+            <span id="dl-mac-x64-pending" class="pending">準備中</span>
+          </li>
+        </ul>
+        <p class="dl-note">macOS 版は macOS 11 (Big Sur) 以降に対応します。2021年以降に発売された Mac は Apple Silicon 版をお選びください。</p>
+      </div>
     </section>
 
     <!-- スマホアプリ「えにしモバイル」。
          Android 版のみ公開済み（Google Play・日本のみ）。iPhone 版は未公開のため
          リンクを出さず「準備中」と表示する（公開されたらリンクへ差し替える）。 -->
-    <section class="downloads" id="mobile-app">
-      <h2>スマホアプリ「えにしモバイル」</h2>
-      <!-- 「単体では使えない」と書かないこと。撮影・補正・利用者自身の Google ドライブへの
-           保存はアプリだけで完結し（初回ウィザードの「パソコンとつなぐ」は飛ばせる）、
-           パソコン版が要るのは取り込み＝顧客情報になる部分だけである。
-           出典: enishi-mobile implementation-status.md §4.17-3。 -->
-      <p class="dl-note">スマホのカメラで名刺を撮ると、パソコンの「えにし」へ自動で届きます。名刺をためてから机で読み取る手間がなくなります。パソコン版「えにし」と組み合わせると、撮った名刺がそのまま顧客情報として取り込まれます（パソコン版 v2.2.1 以降）。パソコン版が無くても、名刺の撮影とご自身の Google ドライブへの保存は行えます。</p>
-      <ul class="dl-list">
-        <li>
-          <strong>Android 版</strong>（Android 8.0 以降）:
-          <a href="https://play.google.com/store/apps/details?id=com.shikumill.enishi_mobile">Google Play で入手</a>
-        </li>
-        <li>
-          <strong>iPhone 版</strong>:
-          <span class="pending">準備中</span>
-        </li>
-      </ul>
+    <section class="section section--accent" id="mobile-app">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Mobile</p>
+          <h2>スマホアプリ「えにしモバイル」</h2>
+        </div>
+        <!-- 「単体では使えない」と書かないこと。撮影・補正・利用者自身の Google ドライブへの
+             保存はアプリだけで完結し（初回ウィザードの「パソコンとつなぐ」は飛ばせる）、
+             パソコン版が要るのは取り込み＝顧客情報になる部分だけである。
+             出典: enishi-mobile implementation-status.md §4.17-3。 -->
+        <p class="dl-note dl-note--lead">スマホのカメラで名刺を撮ると、パソコンの「えにし」へ自動で届きます。名刺をためてから机で読み取る手間がなくなります。パソコン版「えにし」と組み合わせると、撮った名刺がそのまま顧客情報として取り込まれます（パソコン版 v2.2.1 以降）。パソコン版が無くても、名刺の撮影とご自身の Google ドライブへの保存は行えます。</p>
+        <ul class="dl-list" role="list">
+          <li>
+            <span class="dl-list__name">Android 版
+              <span class="dl-list__req">Android 8.0 以降</span>
+            </span>
+            <a href="https://play.google.com/store/apps/details?id=com.shikumill.enishi_mobile">Google Play で入手 →</a>
+          </li>
+          <li>
+            <span class="dl-list__name">iPhone 版</span>
+            <span class="pending">準備中</span>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section class="changelog">
-      <h2>変更履歴</h2>
+    <section class="section" id="changelog">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Changelog</p>
+          <h2>変更履歴</h2>
+        </div>
+        <div class="changelog-list">
       <!-- リリースごとに最新を先頭へ追記する。version.json と内容を一致させる。 -->
       <article>
         <h3>v2.2.11</h3>
@@ -612,12 +685,71 @@
           <li>選択メール送信に都道府県・市町村のカスケード絞り込みを追加</li>
         </ul>
       </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container">
+        <div class="cta__inner">
+          <p class="cta__eyebrow">Free プランあり</p>
+          <h2 class="cta__title">まずは、使ってみてください。</h2>
+          <p class="cta__desc">
+            パソコン ひとつで、名刺スキャンから顧客フォローまで。<br />
+            無料プランから、いつでも始められます。
+          </p>
+          <div class="cta__actions">
+            <a href="https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest"
+               class="btn btn--primary btn--lg" id="cta-download-btn">最新版をダウンロード</a>
+            <a href="https://enishi.shikumill.com/signup" class="btn btn--ghost" data-ref>有料プランを申し込む</a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="container">
-      <p>© 2026 合同会社シクミル ・ <a href="https://shikumill.com">shikumill.com</a></p>
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="https://enishi.shikumill.com/" class="wordmark" data-ref aria-label="えにし 〜お客様ノート〜 ホームへ">
+            <span class="wordmark__name">えにし</span>
+            <span class="wordmark__sub">〜お客様ノート〜</span>
+          </a>
+          <p class="muted mt-2" style="font-size: 0.85rem; line-height: 1.7;">
+            名刺から、人とのご縁を育てる<br />
+            AIで名刺をスキャンする、パソコン向けのお客様ノート。
+          </p>
+        </div>
+        <nav class="footer__nav" aria-label="フッターナビゲーション">
+          <p class="footer__heading">Product</p>
+          <ul class="footer__list" role="list">
+            <li><a href="https://enishi.shikumill.com/" data-ref>ホーム</a></li>
+            <li><a href="https://enishi.shikumill.com/#features" data-ref>特長</a></li>
+            <li><a href="https://enishi.shikumill.com/#pricing" data-ref>料金</a></li>
+            <li><a href="https://enishi.shikumill.com/signup" data-ref>お申し込み</a></li>
+            <li><a href="#other-downloads">ダウンロード</a></li>
+            <li><a href="https://enishi.shikumill.com/support-mobile">アプリのサポート</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="footer__heading">Company</p>
+          <address class="footer__address">
+            <a href="https://shikumill.com/">合同会社シクミル</a><br />
+            〒530-0001<br />
+            大阪府大阪市北区梅田1-1-3<br />
+            大阪駅前第3ビル29階
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <ul class="footer__legal" role="list">
+          <li><a href="https://enishi.shikumill.com/terms">利用規約</a></li>
+          <li><a href="https://enishi.shikumill.com/privacy">プライバシーポリシー</a></li>
+          <li><a href="https://enishi.shikumill.com/tokusho">特定商取引法に基づく表記</a></li>
+        </ul>
+        <p class="footer__copyright">&copy; 2026 合同会社シクミル</p>
+      </div>
     </div>
   </footer>
 
@@ -692,6 +824,7 @@
           }
 
           var winBtn = document.getElementById('download-btn');
+          var ctaBtn = document.getElementById('cta-download-btn');
           var winUrl = downloadUrlOf(data, 'win') || data.downloadUrl || '';
           if (winUrl) {
             // 紹介元が解決できた場合のみパートナー専用 exe を掴ませる。
@@ -700,6 +833,7 @@
             winUrl = partnerDownloadUrl(data, winUrl, referralIdFromQuery());
             winBtn.setAttribute('href', winUrl);
             document.getElementById('dl-win').setAttribute('href', winUrl);
+            ctaBtn.setAttribute('href', winUrl);
           }
 
           // Mac は対象外。ファイル名による紹介元の記録は installer\AI-CRM.iss（Windows 専用）の
@@ -711,7 +845,13 @@
           setupOtherRow('mac-x64', macX64Url);
 
           // Mac 訪問者の場合はプライマリボタンを Mac 向けへ切替
+          //
+          // 動作環境の表示は #sysreq のバッジ（短文）と #mac-arch-note の注記（長文）に分けている。
+          // バッジに長文を入れると丸みのある1行の形が崩れるため、補足は必ず注記側へ書く。
           if (detectOS() === 'mac') {
+            var note = document.getElementById('mac-arch-note');
+            var otherOsNote = 'Windows 版は「その他のダウンロード」からご利用いただけます。';
+            document.getElementById('badge-no-admin').hidden = true;
             if (macArmUrl || macX64Url) {
               // mac 版が公開済み（将来）: Windows ボタンを隠して Mac 2 ボタンを表示
               winBtn.hidden = true;
@@ -719,25 +859,50 @@
                 var armBtn = document.getElementById('mac-arm64-btn');
                 armBtn.setAttribute('href', macArmUrl);
                 armBtn.hidden = false;
+                ctaBtn.setAttribute('href', macArmUrl);
               }
               if (macX64Url) {
                 var x64Btn = document.getElementById('mac-x64-btn');
                 x64Btn.setAttribute('href', macX64Url);
                 x64Btn.hidden = false;
+                if (!macArmUrl) ctaBtn.setAttribute('href', macX64Url);
               }
-              document.getElementById('mac-arch-note').hidden = false;
-              document.getElementById('sysreq').textContent =
-                '対応: macOS 11 (Big Sur) 以降 ・ Windows 版は「その他のダウンロード」からご利用いただけます';
+              note.textContent = '2021年以降に発売された Mac は「Apple Silicon」をお選びください。' + otherOsNote;
+              note.hidden = false;
+              document.getElementById('sysreq').textContent = 'macOS 11 (Big Sur) 以降';
             } else {
               // mac 版が未配布（現状）: Windows ボタンを隠して「準備中」無効化ボタンを表示
               winBtn.hidden = true;
+              ctaBtn.hidden = true;
               document.getElementById('mac-pending-btn').hidden = false;
-              document.getElementById('sysreq').textContent =
-                '対応: macOS 11 (Big Sur) 以降（近日提供予定） ・ Windows 版は「その他のダウンロード」からご利用いただけます';
+              note.textContent = otherOsNote;
+              note.hidden = false;
+              document.getElementById('sysreq').textContent = 'macOS 11 (Big Sur) 以降（近日提供予定）';
             }
           }
         })
         .catch(function () { /* 失敗時は既定のリンクのまま */ });
+    })();
+
+    // ---------------------------------------------------------------------
+    // enishi.shikumill.com へ戻るリンク（data-ref）へ ?ref= を引き継ぐ。
+    //
+    // パートナーのリンクは ?ref 付きでこの配布サイトに着地する。ここから申込ページへ
+    // 素のまま送ると、その時点で紹介元が落ちて「直接契約」に倒れ、**無音で報酬が付かない**。
+    // 付け先は data-ref を書いた本家向けリンクだけに限定する（外部サイトへ ?ref を撒かない）。
+    // 正規化は本文上部の referralIdFromQuery と同じ方針（trim + 小文字化 + 形式検査）。
+    // ---------------------------------------------------------------------
+    (function () {
+      var raw = new URLSearchParams(window.location.search).get('ref');
+      var ref = raw ? raw.trim().toLowerCase() : '';
+      if (!/^rsl_[0-9a-f]{12}$/.test(ref)) return;
+
+      var links = document.querySelectorAll('a[data-ref]');
+      for (var i = 0; i < links.length; i++) {
+        var url = new URL(links[i].getAttribute('href'), window.location.href);
+        url.searchParams.set('ref', ref);
+        links[i].setAttribute('href', url.toString());
+      }
     })();
   </script>
 </body>

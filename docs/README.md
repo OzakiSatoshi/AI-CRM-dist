@@ -5,8 +5,21 @@
 | ファイル | 役割 |
 |---|---|
 | `index.html` | ランディングページ。ダウンロードボタン・機能紹介・変更履歴 |
-| `style.css` | スタイル（依存なしの素の CSS） |
+| `style.css` | スタイル。enishi.shikumill.com と同一のデザイントークンを持つ素の CSS |
 | `version.json` | 最新バージョン・DL URL・リリースノート（アプリ／サイト双方が参照） |
+
+## デザイン（enishi.shikumill.com と統一）
+
+`index.html` / `style.css` は本家 enishi.shikumill.com（Astro）のヘッダー・フッター・配色・
+書体・クラス名をそのまま写している。**本家のデザイントークンを変えたときは `style.css` の
+`:root` も合わせて更新すること**（取得元は `https://enishi.shikumill.com/_astro/*.css` の `:root`）。
+
+書体は Google Fonts（Noto Serif JP / Noto Sans JP / Fraunces）を読み込む。読み込めない環境では
+`:root` のフォールバック（端末内蔵の明朝・ゴシック）に落ちるだけで、レイアウトは崩れない。
+
+本家から `?ref=rsl_xxx` 付きで着地した訪問者のために、本家へ戻るリンク（`data-ref` 付き）へは
+JS が `?ref` を付け直す。**これを外すとパートナー経由のお客様が申込ページで直接契約に倒れ、
+無音で報酬が付かなくなる。**
 
 ## なぜ配布専用の Public リポジトリが必要か
 
