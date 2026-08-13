@@ -699,8 +699,13 @@
             無料プランから、いつでも始められます。
           </p>
           <div class="cta__actions">
+            <!-- ヒーローと同じ出し分けをする。ラベルが「最新版をダウンロード」のまま
+                 リンク先だけ Apple Silicon 版になっていると、Intel Mac の方が動かない
+                 dmg を掴む。CPU の別はラベルに出さないと利用者が選べない。 -->
             <a href="https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest"
                class="btn btn--primary btn--lg" id="cta-download-btn">最新版をダウンロード</a>
+            <a href="#" class="btn btn--primary btn--lg" id="cta-mac-arm64-btn" hidden>ダウンロード（Mac — Apple Silicon）</a>
+            <a href="#" class="btn btn--primary btn--lg" id="cta-mac-x64-btn" hidden>ダウンロード（Mac — Intel）</a>
             <a href="https://enishi.shikumill.com/signup" class="btn btn--ghost" data-ref>有料プランを申し込む</a>
           </div>
         </div>
@@ -801,6 +806,13 @@
         return (Object.prototype.hasOwnProperty.call(map, ref) && map[ref]) ? map[ref] : url;
       }
 
+      // Mac 用ボタン（ヒーロー／下部 CTA 共通）を URL 付きで表示する
+      function showMacButton(id, url) {
+        var btn = document.getElementById(id);
+        btn.setAttribute('href', url);
+        btn.hidden = false;
+      }
+
       // 「その他のダウンロード」欄: URL があればリンク、無ければ「準備中」を表示（行は常設）
       function setupOtherRow(key, url) {
         var link = document.getElementById('dl-' + key);
@@ -853,19 +865,18 @@
             var otherOsNote = 'Windows 版は「その他のダウンロード」からご利用いただけます。';
             document.getElementById('badge-no-admin').hidden = true;
             if (macArmUrl || macX64Url) {
-              // mac 版が公開済み（将来）: Windows ボタンを隠して Mac 2 ボタンを表示
+              // mac 版が公開済み: Windows ボタンを隠して Mac 2 ボタンを表示。
+              // ヒーローとページ下部の CTA の両方を同じ状態にする（片方だけ直すと、
+              // 下まで読んで押した方だけが CPU 違いの dmg を掴む）。
               winBtn.hidden = true;
+              ctaBtn.hidden = true;
               if (macArmUrl) {
-                var armBtn = document.getElementById('mac-arm64-btn');
-                armBtn.setAttribute('href', macArmUrl);
-                armBtn.hidden = false;
-                ctaBtn.setAttribute('href', macArmUrl);
+                showMacButton('mac-arm64-btn', macArmUrl);
+                showMacButton('cta-mac-arm64-btn', macArmUrl);
               }
               if (macX64Url) {
-                var x64Btn = document.getElementById('mac-x64-btn');
-                x64Btn.setAttribute('href', macX64Url);
-                x64Btn.hidden = false;
-                if (!macArmUrl) ctaBtn.setAttribute('href', macX64Url);
+                showMacButton('mac-x64-btn', macX64Url);
+                showMacButton('cta-mac-x64-btn', macX64Url);
               }
               note.textContent = '2021年以降に発売された Mac は「Apple Silicon」をお選びください。' + otherOsNote;
               note.hidden = false;

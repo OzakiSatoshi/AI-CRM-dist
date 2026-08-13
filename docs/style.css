@@ -525,6 +525,10 @@ strong { font-weight: 700; color: var(--color-ink); }
 .cta__desc { color: var(--color-ink-muted); margin-bottom: var(--space-4); }
 .cta__actions { display: flex; align-items: center; justify-content: center; gap: var(--space-3); flex-wrap: wrap; }
 
+/* 申し込みリンクは常に独立した行へ。Mac 訪問者にはダウンロードボタンが2つ並ぶため、
+   同じ行に置くと3つ目が押し出されて不揃いに折り返す。 */
+.cta__actions .btn--ghost { flex-basis: 100%; justify-content: center; }
+
 /* ----------------------------------------------------------------- フッター */
 
 .footer {
