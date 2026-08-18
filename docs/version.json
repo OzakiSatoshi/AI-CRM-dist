@@ -1,15 +1,15 @@
 {
-  "version": "2.2.11",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.11/AI-CRM-Setup-v2.2.11.exe",
+  "version": "2.2.12",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.12/AI-CRM-Setup-v2.2.12.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "顧客一覧と顧客詳細に「取り込み日時」を表示するようになりました。一覧では列ヘッダーのクリックで並べ替えできます。",
+  "releaseNotes": "無料でお試しいただける期間（試用期間）を、初回起動から30日間から60日間に延長しました。",
   "resellers": ["rsl_3c4fb4c3ad5e"],
   "resellerDownloads": {
-    "rsl_3c4fb4c3ad5e": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/partner-installers/AI-CRM-Setup-v2.2.11-rsl_3c4fb4c3ad5e.exe"
+    "rsl_3c4fb4c3ad5e": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/partner-installers/AI-CRM-Setup-v2.2.12-rsl_3c4fb4c3ad5e.exe"
   },
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.11/AI-CRM-Setup-v2.2.11.exe" },
-    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.11/Enishi-v2.2.11-mac-arm64.dmg" },
-    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.11/Enishi-v2.2.11-mac-x64.dmg" }
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.12/AI-CRM-Setup-v2.2.12.exe" },
+    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.12/Enishi-v2.2.12-mac-arm64.dmg" },
+    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.12/Enishi-v2.2.12-mac-x64.dmg" }
   }
 }
