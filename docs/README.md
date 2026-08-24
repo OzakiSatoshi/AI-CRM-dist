@@ -42,7 +42,7 @@ JS が `?ref` を付け直す。**これを外すとパートナー経由のお�
    ```
 3. リポジトリの **Settings → Pages** で、Source = `Deploy from a branch`、
    Branch = `main` / フォルダ = `/docs` を選択して保存。
-4. 数分後、`https://ozakisatoshi.github.io/AI-CRM-dist/` で公開される。
+4. 数分後、`https://dl.enishi.shikumill.com/` で公開される。
 5. 初回リリースは `/release` の手順5（`gh release create`）でインストーラーをアップロードする。
 
 > リポジトリ名・オーナー名を変更した場合は、アプリ側 `src/AI-CRM.Core/Services/UpdateService.cs`
