@@ -1,11 +1,11 @@
 {
-  "version": "2.2.13",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.13/AI-CRM-Setup-v2.2.13.exe",
+  "version": "2.2.14",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.14/AI-CRM-Setup-v2.2.14.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "一斉メールが迷惑メールと判定されにくくなる改善を行いました（エラーになった宛先への送信自動停止・受信者のワンクリック配信停止・1日の送信上限の初期値500通・大量送信時の注意表示）。",
+  "releaseNotes": "名刺のQRコードを読み取れるようになりました。InstagramやFacebookのQRコードが印刷された名刺を取り込むと、そのアカウントが自動で登録され、取り込み後のフォロー画面にそのまま並びます。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.13/AI-CRM-Setup-v2.2.13.exe" },
-    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.13/Enishi-v2.2.13-mac-arm64.dmg" },
-    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.13/Enishi-v2.2.13-mac-x64.dmg" }
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.14/AI-CRM-Setup-v2.2.14.exe" },
+    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.14/Enishi-v2.2.14-mac-arm64.dmg" },
+    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.14/Enishi-v2.2.14-mac-x64.dmg" }
   }
 }
