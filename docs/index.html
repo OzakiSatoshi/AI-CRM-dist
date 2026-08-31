@@ -13,11 +13,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="page">
-  <!-- ヘッダー／フッターは enishi.shikumill.com と同じ骨格・同じワードマークを用いる。
-       本家へ戻るリンクには data-ref を付け、?ref= を引き継がせる（下部スクリプト参照）。 -->
+  <!-- ヘッダー／フッターは enishi.shikumill.com と同じ骨格・同じワードマークを用いる。 -->
   <header class="header">
     <nav class="nav container" aria-label="グローバルナビゲーション">
-      <a href="https://enishi.shikumill.com/" class="wordmark" data-ref aria-label="えにし 〜お客様ノート〜 ホームへ">
+      <a href="https://enishi.shikumill.com/" class="wordmark" aria-label="えにし 〜お客様ノート〜 ホームへ">
         <span class="wordmark__name">えにし</span>
         <span class="wordmark__sub">〜お客様ノート〜</span>
       </a>
@@ -25,7 +24,7 @@
         <li class="nav__item"><a href="#features" class="nav__link">特長</a></li>
         <li class="nav__item"><a href="#other-downloads" class="nav__link">ダウンロード</a></li>
         <li class="nav__item"><a href="#changelog" class="nav__link">変更履歴</a></li>
-        <li class="nav__item"><a href="https://enishi.shikumill.com/signup" class="nav__link" data-ref>お申し込み</a></li>
+        <li class="nav__item"><a href="https://enishi.shikumill.com/signup" class="nav__link">お申し込み</a></li>
       </ul>
     </nav>
   </header>
@@ -722,7 +721,7 @@
                class="btn btn--primary btn--lg" id="cta-download-btn">最新版をダウンロード</a>
             <a href="#" class="btn btn--primary btn--lg" id="cta-mac-arm64-btn" hidden>ダウンロード（Mac — Apple Silicon）</a>
             <a href="#" class="btn btn--primary btn--lg" id="cta-mac-x64-btn" hidden>ダウンロード（Mac — Intel）</a>
-            <a href="https://enishi.shikumill.com/signup" class="btn btn--ghost" data-ref>有料プランを申し込む</a>
+            <a href="https://enishi.shikumill.com/signup" class="btn btn--ghost">有料プランを申し込む</a>
           </div>
         </div>
       </div>
@@ -733,7 +732,7 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="https://enishi.shikumill.com/" class="wordmark" data-ref aria-label="えにし 〜お客様ノート〜 ホームへ">
+          <a href="https://enishi.shikumill.com/" class="wordmark" aria-label="えにし 〜お客様ノート〜 ホームへ">
             <span class="wordmark__name">えにし</span>
             <span class="wordmark__sub">〜お客様ノート〜</span>
           </a>
@@ -745,21 +744,26 @@
         <nav class="footer__nav" aria-label="フッターナビゲーション">
           <p class="footer__heading">Product</p>
           <ul class="footer__list" role="list">
-            <li><a href="https://enishi.shikumill.com/" data-ref>ホーム</a></li>
-            <li><a href="https://enishi.shikumill.com/#features" data-ref>特長</a></li>
-            <li><a href="https://enishi.shikumill.com/#pricing" data-ref>料金</a></li>
-            <li><a href="https://enishi.shikumill.com/signup" data-ref>お申し込み</a></li>
+            <li><a href="https://enishi.shikumill.com/">ホーム</a></li>
+            <li><a href="https://enishi.shikumill.com/#features">特長</a></li>
+            <li><a href="https://enishi.shikumill.com/#pricing">料金</a></li>
+            <li><a href="https://enishi.shikumill.com/signup">お申し込み</a></li>
             <li><a href="#other-downloads">ダウンロード</a></li>
             <li><a href="https://enishi.shikumill.com/support-mobile">アプリのサポート</a></li>
           </ul>
         </nav>
         <div>
-          <p class="footer__heading">Company</p>
+          <!-- 販売元表示: 販売は株式会社HTOが担う。提供元（開発・ライセンス発行）は
+               合同会社シクミルで、特定商取引法上の販売事業者もシクミルのまま（入金先が
+               シクミルであるため、法令上ここを書き換えることはできない）。
+               詳細は docs/hto-branding-runbook.md。 -->
+          <p class="footer__heading">販売</p>
           <address class="footer__address">
-            <a href="https://shikumill.com/">合同会社シクミル</a><br />
-            〒530-0001<br />
-            大阪府大阪市北区梅田1-1-3<br />
-            大阪駅前第3ビル29階
+            株式会社HTO
+          </address>
+          <p class="footer__heading" style="margin-top: 1rem;">提供元</p>
+          <address class="footer__address">
+            <a href="https://shikumill.com/">合同会社シクミル</a>
           </address>
           <ul class="footer__list" role="list" style="margin-top: 0.75rem;">
             <li><a href="https://shikumill.com/contact" target="_blank" rel="noopener noreferrer">お問い合わせ</a></li>
@@ -772,7 +776,7 @@
           <li><a href="https://enishi.shikumill.com/privacy">プライバシーポリシー</a></li>
           <li><a href="https://enishi.shikumill.com/tokusho">特定商取引法に基づく表記</a></li>
         </ul>
-        <p class="footer__copyright">&copy; 2026 合同会社シクミル</p>
+        <p class="footer__copyright">&copy; 2026 えにし 〜お客様ノート〜</p>
       </div>
     </div>
   </footer>
@@ -795,34 +799,6 @@
 
       function downloadUrlOf(data, key) {
         return (data.downloads && data.downloads[key] && data.downloads[key].url) || '';
-      }
-
-      // ?ref=rsl_xxx（紹介元パートナー）の取得と正規化。
-      // trim + 小文字化するのは、申込ページ（enishi.shikumill.com/signup）や
-      // インストーラー installer\AI-CRM.iss と同じ方針。reseller_id は小文字hex 固定なので、
-      // リンクがどこかで大文字化されても取りこぼさない（正規化しないと「無音で報酬が付かない」事故になる）。
-      // 形式の正の定義は src\AI-CRM.Core\Services\ReferralSettings.IsValidResellerId。
-      // 形式が違うものはここで捨てる（後段の resellers 照合まで持ち込まない）。
-      function referralIdFromQuery() {
-        var raw = new URLSearchParams(window.location.search).get('ref');
-        var ref = raw ? raw.trim().toLowerCase() : '';
-        return /^rsl_[0-9a-f]{12}$/.test(ref) ? ref : '';
-      }
-
-      // 通常版の URL を、そのパートナー専用インストーラーの URL へ差し替える。
-      //
-      // パートナー版は中身が通常版と同一だが、ファイル名の紹介コードから referral.txt を書き出す。
-      // これが**自動更新に混ざると全利用者が誤帰属する**ため、パートナー版は releases/latest に
-      // 出ない**専用の prerelease** に置く。したがってここでは version.json の `resellerDownloads`
-      //（reseller_id → その prerelease 上の専用 exe の絶対 URL）を**明示で引くだけ**にする。
-      //
-      // 以前は通常版 URL の末尾 .exe を置換して組み立てていたが、それは latest リリースのパスに
-      // 依存し、自動更新用アセットと同居する温床だった。名前を組み立てず、上げ済みの URL を引く。
-      // 明示 URL が無い ID は通常版へ倒す（帰属は消えるが 404 より害が小さい）。
-      function partnerDownloadUrl(data, url, ref) {
-        if (!ref) return url;
-        var map = (data && data.resellerDownloads) || {};
-        return (Object.prototype.hasOwnProperty.call(map, ref) && map[ref]) ? map[ref] : url;
       }
 
       // Mac 用ボタン（ヒーロー／下部 CTA 共通）を URL 付きで表示する
@@ -858,18 +834,11 @@
           var ctaBtn = document.getElementById('cta-download-btn');
           var winUrl = downloadUrlOf(data, 'win') || data.downloadUrl || '';
           if (winUrl) {
-            // 紹介元が解決できた場合のみパートナー専用 exe を掴ませる。
-            // ファイル名に reseller_id が入っていることがインストール時の記録条件で、
-            // Free で使い始めたお客様が後日有料化したときの帰属はこれだけが頼り。
-            winUrl = partnerDownloadUrl(data, winUrl, referralIdFromQuery());
             winBtn.setAttribute('href', winUrl);
             document.getElementById('dl-win').setAttribute('href', winUrl);
             ctaBtn.setAttribute('href', winUrl);
           }
 
-          // Mac は対象外。ファイル名による紹介元の記録は installer\AI-CRM.iss（Windows 専用）の
-          // 仕組みで、macOS 側には現状これに相当する受け皿が無い。専用ファイル名を作っても
-          // 誰も読まないため、Mac のボタンは書き換えない。
           var macArmUrl = downloadUrlOf(data, 'mac-arm64');
           var macX64Url = downloadUrlOf(data, 'mac-x64');
           setupOtherRow('mac-arm64', macArmUrl);
@@ -912,27 +881,6 @@
           }
         })
         .catch(function () { /* 失敗時は既定のリンクのまま */ });
-    })();
-
-    // ---------------------------------------------------------------------
-    // enishi.shikumill.com へ戻るリンク（data-ref）へ ?ref= を引き継ぐ。
-    //
-    // パートナーのリンクは ?ref 付きでこの配布サイトに着地する。ここから申込ページへ
-    // 素のまま送ると、その時点で紹介元が落ちて「直接契約」に倒れ、**無音で報酬が付かない**。
-    // 付け先は data-ref を書いた本家向けリンクだけに限定する（外部サイトへ ?ref を撒かない）。
-    // 正規化は本文上部の referralIdFromQuery と同じ方針（trim + 小文字化 + 形式検査）。
-    // ---------------------------------------------------------------------
-    (function () {
-      var raw = new URLSearchParams(window.location.search).get('ref');
-      var ref = raw ? raw.trim().toLowerCase() : '';
-      if (!/^rsl_[0-9a-f]{12}$/.test(ref)) return;
-
-      var links = document.querySelectorAll('a[data-ref]');
-      for (var i = 0; i < links.length; i++) {
-        var url = new URL(links[i].getAttribute('href'), window.location.href);
-        url.searchParams.set('ref', ref);
-        links[i].setAttribute('href', url.toString());
-      }
     })();
   </script>
 </body>

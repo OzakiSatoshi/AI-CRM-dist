@@ -3,10 +3,6 @@
   "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.13/AI-CRM-Setup-v2.2.13.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
   "releaseNotes": "一斉メールが迷惑メールと判定されにくくなる改善を行いました（エラーになった宛先への送信自動停止・受信者のワンクリック配信停止・1日の送信上限の初期値500通・大量送信時の注意表示）。",
-  "resellers": ["rsl_3c4fb4c3ad5e"],
-  "resellerDownloads": {
-    "rsl_3c4fb4c3ad5e": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/partner-installers/AI-CRM-Setup-v2.2.13-rsl_3c4fb4c3ad5e.exe"
-  },
   "downloads": {
     "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.13/AI-CRM-Setup-v2.2.13.exe" },
     "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.13/Enishi-v2.2.13-mac-arm64.dmg" },
