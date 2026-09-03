@@ -1,11 +1,11 @@
 {
-  "version": "2.2.16",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.16/AI-CRM-Setup-v2.2.16.exe",
+  "version": "2.2.17",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.17/AI-CRM-Setup-v2.2.17.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "名刺に印刷された LINE の「友だち追加」QRコードを、お客様の情報として取り込めるようになりました。また、画面の見た目を、ホームページや使い方ガイドと同じ落ち着いた緑に統一しました。",
+  "releaseNotes": "画面の見た目を、ホームページや使い方ガイドと同じ落ち着いた緑に統一しました。デスクトップのアイコンも新しくなります。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.16/AI-CRM-Setup-v2.2.16.exe" },
-    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.16/Enishi-v2.2.16-mac-arm64.dmg" },
-    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.16/Enishi-v2.2.16-mac-x64.dmg" }
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.17/AI-CRM-Setup-v2.2.17.exe" },
+    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.17/Enishi-v2.2.17-mac-arm64.dmg" },
+    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.17/Enishi-v2.2.17-mac-x64.dmg" }
   }
 }
