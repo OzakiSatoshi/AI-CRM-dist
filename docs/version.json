@@ -1,11 +1,11 @@
 {
-  "version": "2.2.14",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.14/AI-CRM-Setup-v2.2.14.exe",
+  "version": "2.2.15",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.15/AI-CRM-Setup-v2.2.15.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "名刺のQRコードを読み取れるようになりました。InstagramやFacebookのQRコードが印刷された名刺を取り込むと、そのアカウントが自動で登録され、取り込み後のフォロー画面にそのまま並びます。",
+  "releaseNotes": "1枚の名刺に複数のSNSのQRコードが刷られていても、すべて読み取れるようになりました。同じInstagramのQRが2つある場合や、LINE公式とInstagramが併載されている場合も取りこぼしません。濃い色の地に白抜きで刷られたQRコードにも対応し、取り込み後のフォロー画面にはLINE・X・YouTubeも並びます。あわせて、SNS欄に意味のない行が登録されることがあった不具合を修正しました。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.14/AI-CRM-Setup-v2.2.14.exe" },
-    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.14/Enishi-v2.2.14-mac-arm64.dmg" },
-    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.14/Enishi-v2.2.14-mac-x64.dmg" }
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.15/AI-CRM-Setup-v2.2.15.exe" },
+    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.15/Enishi-v2.2.15-mac-arm64.dmg" },
+    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.15/Enishi-v2.2.15-mac-x64.dmg" }
   }
 }
