@@ -1,11 +1,11 @@
 {
-  "version": "2.2.18",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.18/AI-CRM-Setup-v2.2.18.exe",
+  "version": "2.2.19",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.19/AI-CRM-Setup-v2.2.19.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "お客様にメールを送る画面で、送信先の行をダブルクリックするとその方の情報をその場で編集できるようになりました。顧客詳細の既存タグ選択が、タグ名で絞り込める検索付きになりました。",
+  "releaseNotes": "「同じ人をまとめる」で、別のお客様だと判断した組み合わせを覚えておき、次回から表示しないようにしました。転職などで新しい方を残したいときは、残すお客様を選べるようになりました。Googleの連絡先へタグを同期するときに、まれに失敗することがあった問題を直しました。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.18/AI-CRM-Setup-v2.2.18.exe" },
-    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.18/Enishi-v2.2.18-mac-arm64.dmg" },
-    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.18/Enishi-v2.2.18-mac-x64.dmg" }
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.19/AI-CRM-Setup-v2.2.19.exe" },
+    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.19/Enishi-v2.2.19-mac-arm64.dmg" },
+    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.19/Enishi-v2.2.19-mac-x64.dmg" }
   }
 }
