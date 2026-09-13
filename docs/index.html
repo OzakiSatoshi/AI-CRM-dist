@@ -56,6 +56,25 @@
             <span class="btn btn--primary btn--lg btn--disabled" id="mac-pending-btn" hidden>Mac版（準備中）</span>
             <span class="version" id="version-label">最新版を確認中…</span>
           </div>
+
+          <!--
+            署名なしインストーラーのため、Windows では初回に SmartScreen の青い画面が出る。
+            警告そのものは消せない（コード署名は費用対効果が合わず見送り：2026-09-13 判断）ので、
+            押す直前のここで手順を先回りして案内する。文言はマニュアル第1章・第15章と同じにすること。
+            Mac 訪問者には出さない（dmg は Developer ID 署名＋公証済みで、この画面は出ない）。
+          -->
+          <details class="smartscreen" id="smartscreen-hero">
+            <summary>「WindowsによってPCが保護されました」と青い画面が出たときは</summary>
+            <div class="smartscreen__body">
+              <p>インターネットから入手した新しいソフトを開くときに出る確認画面です。故障や異常ではありません。次の順に進めてください。</p>
+              <ol>
+                <li>青い画面の中の「<strong>詳細情報</strong>」という小さな文字を押します。</li>
+                <li>表示が広がり、右下に「<strong>実行</strong>」ボタンが現れます。これを押します。</li>
+                <li>インストールが始まります。あとは画面の案内に沿って「次へ」を押していけば完了です。</li>
+              </ol>
+              <p class="smartscreen__warn">「詳細情報」を押さずにこの画面を閉じると、インストールは始まりません。その場合は、ダウンロードしたファイルをもう一度ダブルクリックしてやり直してください。</p>
+            </div>
+          </details>
           <p class="hero__note" id="mac-arch-note" hidden>2021年以降に発売された Mac は「Apple Silicon」をお選びください。</p>
           <div class="hero__badges">
             <span class="badge" id="sysreq">Windows 10 (1809) 以降 / 64bit</span>
@@ -766,6 +785,18 @@
             <a href="#" class="btn btn--primary btn--lg" id="cta-mac-x64-btn" hidden>ダウンロード（Mac — Intel）</a>
             <a href="https://enishi.shikumill.com/signup" class="btn btn--ghost">有料プランを申し込む</a>
           </div>
+          <details class="smartscreen" id="smartscreen-cta">
+            <summary>「WindowsによってPCが保護されました」と青い画面が出たときは</summary>
+            <div class="smartscreen__body">
+              <p>インターネットから入手した新しいソフトを開くときに出る確認画面です。故障や異常ではありません。次の順に進めてください。</p>
+              <ol>
+                <li>青い画面の中の「<strong>詳細情報</strong>」という小さな文字を押します。</li>
+                <li>表示が広がり、右下に「<strong>実行</strong>」ボタンが現れます。これを押します。</li>
+                <li>インストールが始まります。あとは画面の案内に沿って「次へ」を押していけば完了です。</li>
+              </ol>
+              <p class="smartscreen__warn">「詳細情報」を押さずにこの画面を閉じると、インストールは始まりません。その場合は、ダウンロードしたファイルをもう一度ダブルクリックしてやり直してください。</p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
@@ -895,6 +926,9 @@
             var note = document.getElementById('mac-arch-note');
             var otherOsNote = 'Windows 版は「その他のダウンロード」からご利用いただけます。';
             document.getElementById('badge-no-admin').hidden = true;
+            // SmartScreen の案内も Windows 固有。mac の dmg は署名＋公証済みでこの画面は出ない
+            document.getElementById('smartscreen-hero').hidden = true;
+            document.getElementById('smartscreen-cta').hidden = true;
             if (macArmUrl || macX64Url) {
               // mac 版が公開済み: Windows ボタンを隠して Mac 2 ボタンを表示。
               // ヒーローとページ下部の CTA の両方を同じ状態にする（片方だけ直すと、

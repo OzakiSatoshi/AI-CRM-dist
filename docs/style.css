@@ -529,6 +529,69 @@ strong { font-weight: 700; color: var(--color-ink); }
    同じ行に置くと3つ目が押し出されて不揃いに折り返す。 */
 .cta__actions .btn--ghost { flex-basis: 100%; justify-content: center; }
 
+/* ------------------------------------------- SmartScreen の案内（Windows 専用） */
+
+/* インストーラーは未署名で、初回は「WindowsによってPCが保護されました」の青い画面が
+   必ず出る（コード署名は費用対効果が合わず見送り）。警告を消せない以上、押す直前の
+   ここで手順を先回りする。閉じていても要約行だけは読めるように組むこと。 */
+.smartscreen {
+  max-width: var(--max-prose);
+  margin: var(--space-3) 0 0;
+  border: 1px solid var(--color-rule);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  font-size: var(--size-small);
+  color: var(--color-ink-muted);
+}
+
+/* Mac 訪問者には hidden 属性で隠す。display を指定すると hidden が効かなくなる。 */
+.smartscreen[hidden] { display: none; }
+
+.smartscreen > summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  color: var(--color-ink);
+  font-weight: 500;
+  list-style: none;
+}
+
+.smartscreen > summary::-webkit-details-marker { display: none; }
+.smartscreen > summary:hover { color: var(--color-accent-ink); }
+
+/* 開閉の三角は自前で描く（既定マーカーは行頭の位置がブラウザ間で揃わない） */
+.smartscreen > summary::before {
+  content: "";
+  flex: none;
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 1.5px solid var(--color-ink-faint);
+  border-bottom: 1.5px solid var(--color-ink-faint);
+  /* 折り返した要約の1行目に光学的に揃える（flex-start 起点からの下げ幅） */
+  margin-top: 0.55em;
+  transform: rotate(-45deg);
+  transition: transform 0.2s var(--ease);
+}
+
+.smartscreen[open] > summary::before { transform: rotate(45deg); }
+
+.smartscreen__body {
+  padding: 0 1rem 0.9rem;
+  line-height: var(--rhythm);
+}
+
+.smartscreen__body p { margin: 0 0 0.6em; }
+.smartscreen__body ol { margin: 0 0 0.6em; padding-left: 1.3em; }
+.smartscreen__body li { margin-bottom: 0.3em; }
+.smartscreen__body p:last-child { margin-bottom: 0; }
+.smartscreen__warn { color: var(--color-ink-faint); }
+
+/* 下部 CTA は中央寄せの帯。手順そのものは左揃えのほうが追いやすい。 */
+.cta .smartscreen { margin: var(--space-4) auto 0; text-align: left; }
+
 /* ----------------------------------------------------------------- フッター */
 
 .footer {
