@@ -11,6 +11,62 @@
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&display=swap" />
   <link rel="stylesheet" href="style.css" />
+  <!-- ===== アクセス解析（GA4） =====================================
+    enishi.shikumill.com（本家 LP）と同じプロパティ・同じオプトアウト方式（2026-09-24 追加）。
+    既定で計測ON、このサイトの localStorage['analytics_optout']==='1' で停止。
+    localStorage はオリジンごとなので、本家や shikumill.com で停止してもここには効かない。
+    停止のボタンはフッターに置いている（プライバシーポリシー「アクセス解析」の運用に合わせる）。
+    えにしの集客の成果は「アプリのダウンロード数」なので、インストーラーのリンクを押したときに
+    installer_download を送る（GA4 のキーイベント）。platform は win / mac-arm64 / mac-x64。
+    ============================================================== -->
+  <script>
+  (function () {
+    var GA_ID = 'G-3SZXWTBJM8';
+    var PRODUCT = 'enishi';
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    window.gtag = gtag;
+    var optout = false;
+    try { optout = localStorage.getItem('analytics_optout') === '1'; } catch (e) {}
+    if (optout) { window['ga-disable-' + GA_ID] = true; }
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: optout ? 'denied' : 'granted'
+    });
+    gtag('js', new Date());
+    gtag('config', GA_ID, { send_page_view: true, product: PRODUCT });
+
+    // ボタンの href は version.json を読んだあと JS で差し替わるので、押した瞬間の href と id で判定する。
+    function platformOf(a) {
+      var id = a.id || '';
+      var href = a.getAttribute('href') || '';
+      if (id.indexOf('mac-arm64') > -1 || href.indexOf('mac-arm64') > -1) return 'mac-arm64';
+      if (id.indexOf('mac-x64') > -1 || href.indexOf('mac-x64') > -1) return 'mac-x64';
+      return 'win';
+    }
+    function locationOf(a) {
+      var id = a.id || '';
+      if (id.indexOf('cta-') === 0) return 'cta';
+      if (id.indexOf('dl-') === 0) return 'other_downloads';
+      return 'hero';
+    }
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest && e.target.closest('a');
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (href.indexOf('github.com/OzakiSatoshi/AI-CRM-dist/releases') > -1) {
+        gtag('event', 'installer_download', {
+          product: PRODUCT, platform: platformOf(a), cta_location: locationOf(a)
+        });
+      } else if (href.indexOf('play.google.com') > -1) {
+        gtag('event', 'store_click', { product: PRODUCT, cta_location: 'mobile_app', destination: 'google_play' });
+      } else if (href.indexOf('enishi.shikumill.com/signup') > -1) {
+        gtag('event', 'signup_start', { product: PRODUCT, cta_location: 'download_site', plan: 'unspecified' });
+      }
+    }, true);
+  })();
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SZXWTBJM8"></script>
 </head>
 <body class="page">
   <!-- ヘッダー／フッターは enishi.shikumill.com と同じ骨格・同じワードマークを用いる。 -->
@@ -868,8 +924,31 @@
         </ul>
         <p class="footer__copyright">&copy; 2026 えにし 〜お客様ノート〜</p>
       </div>
+      <p class="footer__analytics" style="margin: 1rem 0 0; font-size: 0.8rem; color: var(--color-ink-faint); line-height: 1.7;">
+        このサイトでは、改善のために Google アナリティクスで閲覧状況を集計しています（個人を特定する情報は取得しません。詳しくは<a href="https://enishi.shikumill.com/privacy">プライバシーポリシー</a>）。
+        <button type="button" id="analytics-toggle" style="font: inherit; color: inherit; background: none; border: 0; padding: 0; text-decoration: underline; cursor: pointer;" hidden></button>
+      </p>
     </div>
   </footer>
+
+  <script>
+    // フッターの「このサイトでのアクセス解析を停止／再開する」。設定はこのブラウザのこのサイトにだけ保存される。
+    (function () {
+      var btn = document.getElementById('analytics-toggle');
+      if (!btn) return;
+      function isOff() { try { return localStorage.getItem('analytics_optout') === '1'; } catch (e) { return false; } }
+      function render() { btn.textContent = isOff() ? 'このサイトでのアクセス解析を再開する' : 'このサイトでのアクセス解析を停止する'; }
+      btn.hidden = false;
+      render();
+      btn.addEventListener('click', function () {
+        var next = !isOff();
+        try { localStorage.setItem('analytics_optout', next ? '1' : '0'); } catch (e) {}
+        render();
+        // 停止は gtag.js 読込み前に立てるスイッチなので、確実に効かせるため読み直す。
+        location.reload();
+      });
+    })();
+  </script>
 
   <script>
     // version.json から最新バージョンを読み、OS 判定でプライマリボタンを出し分ける。
