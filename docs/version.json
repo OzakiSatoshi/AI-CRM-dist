@@ -1,11 +1,11 @@
 {
-  "version": "2.2.21",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.21/AI-CRM-Setup-v2.2.21.exe",
+  "version": "2.2.22",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.22/AI-CRM-Setup-v2.2.22.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "お客様一覧の業種の絞り込みで、複数の業種を持つお客様がどの業種でも見つかるようにしました。名刺の読み取りで、例会日や住所などSNSではない記載がSNSの「その他」に入らないようにしました。",
+  "releaseNotes": "左のメニューに「マニュアルを開く」を追加し、いつでも最新の使い方ガイドをご覧いただけるようにしました。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.21/AI-CRM-Setup-v2.2.21.exe" },
-    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.21/Enishi-v2.2.21-mac-arm64.dmg" },
-    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.21/Enishi-v2.2.21-mac-x64.dmg" }
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.22/AI-CRM-Setup-v2.2.22.exe" },
+    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.22/Enishi-v2.2.22-mac-arm64.dmg" },
+    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.22/Enishi-v2.2.22-mac-x64.dmg" }
   }
 }
