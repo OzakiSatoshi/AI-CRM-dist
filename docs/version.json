@@ -1,11 +1,11 @@
 {
-  "version": "2.2.23",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.23/AI-CRM-Setup-v2.2.23.exe",
+  "version": "2.2.24",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.24/AI-CRM-Setup-v2.2.24.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "名刺の読み取りを、読み取ったそばから1枚ずつお客様として登録する方式にしました。途中で画面を閉じても、読み取った分は失われません。",
+  "releaseNotes": "イベントの参加人数に削除済みのお客様が数えられる問題を直し、読み取りでエラーが起きたときの案内を分かりやすくしました。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.23/AI-CRM-Setup-v2.2.23.exe" },
-    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.23/Enishi-v2.2.23-mac-arm64.dmg" },
-    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.23/Enishi-v2.2.23-mac-x64.dmg" }
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.24/AI-CRM-Setup-v2.2.24.exe" },
+    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.24/Enishi-v2.2.24-mac-arm64.dmg" },
+    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.24/Enishi-v2.2.24-mac-x64.dmg" }
   }
 }
