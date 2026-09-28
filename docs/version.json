@@ -1,11 +1,11 @@
 {
-  "version": "2.2.26",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.26/AI-CRM-Setup-v2.2.26.exe",
+  "version": "2.2.27",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.27/AI-CRM-Setup-v2.2.27.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "名刺を「表と裏」で読み取るときに、別の方の名刺が組になっていても、1人ずつ正しく登録できるようにしました。",
+  "releaseNotes": "メールの送信設定が、メールアドレスとパスワードを入れるだけでできるようになりました。一斉メールが送れなかったときに、失敗の理由が表示されるようになりました。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.26/AI-CRM-Setup-v2.2.26.exe" },
-    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.26/Enishi-v2.2.26-mac-arm64.dmg" },
-    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.26/Enishi-v2.2.26-mac-x64.dmg" }
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.27/AI-CRM-Setup-v2.2.27.exe" },
+    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.27/Enishi-v2.2.27-mac-arm64.dmg" },
+    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.27/Enishi-v2.2.27-mac-x64.dmg" }
   }
 }
