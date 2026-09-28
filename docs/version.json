@@ -1,11 +1,11 @@
 {
-  "version": "2.2.25",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.25/AI-CRM-Setup-v2.2.25.exe",
+  "version": "2.2.26",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.26/AI-CRM-Setup-v2.2.26.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "名刺の読み取りが途中で止まっても、次に開いたときに続きから読み取れるようにしました。",
+  "releaseNotes": "名刺を「表と裏」で読み取るときに、別の方の名刺が組になっていても、1人ずつ正しく登録できるようにしました。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.25/AI-CRM-Setup-v2.2.25.exe" },
-    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.25/Enishi-v2.2.25-mac-arm64.dmg" },
-    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.25/Enishi-v2.2.25-mac-x64.dmg" }
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.26/AI-CRM-Setup-v2.2.26.exe" },
+    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.26/Enishi-v2.2.26-mac-arm64.dmg" },
+    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.26/Enishi-v2.2.26-mac-x64.dmg" }
   }
 }
