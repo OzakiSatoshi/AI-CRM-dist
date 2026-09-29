@@ -1,11 +1,11 @@
 {
-  "version": "2.2.29",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.29/AI-CRM-Setup-v2.2.29.exe",
+  "version": "2.2.30",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.30/AI-CRM-Setup-v2.2.30.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "Mac で、かんたん設定の「クラウドを検出」が OneDrive・Google ドライブ・Dropbox のフォルダを見つけられなかった不具合を修正しました。Mac で手動で選んだクラウドのフォルダに、誤って「クラウド同期フォルダの中にない」という警告が出る不具合を修正しました。",
+  "releaseNotes": "名刺の読み取りで、表と裏がずれるという不要な確認・案内を出さないようにしました。表と裏を撮った写真の取り込みは1人分（2枚）ずつになりました。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.29/AI-CRM-Setup-v2.2.29.exe" },
-    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.29/Enishi-v2.2.29-mac-arm64.dmg" },
-    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.29/Enishi-v2.2.29-mac-x64.dmg" }
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.30/AI-CRM-Setup-v2.2.30.exe" },
+    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.30/Enishi-v2.2.30-mac-arm64.dmg" },
+    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.30/Enishi-v2.2.30-mac-x64.dmg" }
   }
 }
