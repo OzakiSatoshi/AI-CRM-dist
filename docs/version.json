@@ -1,11 +1,11 @@
 {
-  "version": "2.2.30",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.30/AI-CRM-Setup-v2.2.30.exe",
+  "version": "2.2.31",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.31/AI-CRM-Setup-v2.2.31.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "名刺の読み取りで、表と裏がずれるという不要な確認・案内を出さないようにしました。表と裏を撮った写真の取り込みは1人分（2枚）ずつになりました。",
+  "releaseNotes": "えにしモバイルで名刺の表と裏を撮るときの案内を分かりやすくしました。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.30/AI-CRM-Setup-v2.2.30.exe" },
-    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.30/Enishi-v2.2.30-mac-arm64.dmg" },
-    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.30/Enishi-v2.2.30-mac-x64.dmg" }
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.31/AI-CRM-Setup-v2.2.31.exe" },
+    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.31/Enishi-v2.2.31-mac-arm64.dmg" },
+    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.31/Enishi-v2.2.31-mac-x64.dmg" }
   }
 }
