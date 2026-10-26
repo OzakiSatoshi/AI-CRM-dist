@@ -650,3 +650,8 @@ strong { font-weight: 700; color: var(--color-ink); }
 .footer__legal { display: flex; gap: var(--space-3); list-style: none; padding: 0; margin: 0; }
 .footer__legal li { margin: 0; }
 .footer__copyright { margin: 0; color: var(--color-ink-faint); }
+
+/* Store 版を主役にしたので、インストーラー版は小さな文字リンクで添える（ボタンにしない）。 */
+.cta__alt { margin: var(--space-3) 0 0; font-size: var(--size-small); color: var(--color-ink-muted); }
+.alt-link a { text-decoration: underline; text-underline-offset: 3px; }
+.alt-link[hidden] { display: none; }
