@@ -1,11 +1,11 @@
 {
-  "version": "2.2.33",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.33/AI-CRM-Setup-v2.2.33.exe",
+  "version": "2.2.34",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.34/AI-CRM-Setup-v2.2.34.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "名刺などをAIで読み取る前に、送り先と取り扱いをご説明して同意をいただくようにしました。無料の試用期間が残り14日になると、画面の上でお知らせするようにしました。",
+  "releaseNotes": "設定の［お客様の分類］で、分類と重要度の名前を変更できるようにしました。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.33/AI-CRM-Setup-v2.2.33.exe" },
-    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.33/Enishi-v2.2.33-mac-arm64.dmg" },
-    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.33/Enishi-v2.2.33-mac-x64.dmg" }
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.34/AI-CRM-Setup-v2.2.34.exe" },
+    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.34/Enishi-v2.2.34-mac-arm64.dmg" },
+    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.34/Enishi-v2.2.34-mac-x64.dmg" }
   }
 }
