@@ -1,11 +1,11 @@
 {
-  "version": "2.2.34",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.34/AI-CRM-Setup-v2.2.34.exe",
+  "version": "2.2.35",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.35/AI-CRM-Setup-v2.2.35.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "設定の［お客様の分類］で、分類と重要度の名前を変更できるようにしました。",
+  "releaseNotes": "クラウド同期の信頼性を高めました。パソコンの電源が切れたときや通信が切れたときも、入力した内容が手元に残り、次の起動で送り直します。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.34/AI-CRM-Setup-v2.2.34.exe" },
-    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.34/Enishi-v2.2.34-mac-arm64.dmg" },
-    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.34/Enishi-v2.2.34-mac-x64.dmg" }
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.35/AI-CRM-Setup-v2.2.35.exe" },
+    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.35/Enishi-v2.2.35-mac-arm64.dmg" },
+    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.35/Enishi-v2.2.35-mac-x64.dmg" }
   }
 }
