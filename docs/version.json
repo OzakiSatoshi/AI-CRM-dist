@@ -1,11 +1,11 @@
 {
-  "version": "2.2.35",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.35/AI-CRM-Setup-v2.2.35.exe",
+  "version": "2.2.36",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.36/AI-CRM-Setup-v2.2.36.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "クラウド同期の信頼性を高めました。パソコンの電源が切れたときや通信が切れたときも、入力した内容が手元に残り、次の起動で送り直します。",
+  "releaseNotes": "クラウド同期の不具合を修正しました。強制終了のあとに別のパソコンで更新があった場合に、データが読めなくなることがある問題を直しました。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.35/AI-CRM-Setup-v2.2.35.exe" },
-    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.35/Enishi-v2.2.35-mac-arm64.dmg" },
-    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.35/Enishi-v2.2.35-mac-x64.dmg" }
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.36/AI-CRM-Setup-v2.2.36.exe" },
+    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.36/Enishi-v2.2.36-mac-arm64.dmg" },
+    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.36/Enishi-v2.2.36-mac-x64.dmg" }
   }
 }
