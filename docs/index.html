@@ -198,14 +198,14 @@
           </li>
           <li>
             <span class="dl-list__name">macOS 版 — Apple Silicon
-              <span class="dl-list__req">macOS 11 (Big Sur) 以降</span>
+              <span class="dl-list__req">macOS 12 (Monterey) 以降</span>
             </span>
             <a id="dl-mac-arm64" hidden href="#">ダウンロード →</a>
             <span id="dl-mac-arm64-pending" class="pending">準備中</span>
           </li>
           <li>
             <span class="dl-list__name">macOS 版 — Intel
-              <span class="dl-list__req">macOS 11 (Big Sur) 以降</span>
+              <span class="dl-list__req">macOS 12 (Monterey) 以降</span>
             </span>
             <a id="dl-mac-x64" hidden href="#">ダウンロード →</a>
             <span id="dl-mac-x64-pending" class="pending">準備中</span>
@@ -229,7 +229,7 @@
             <p class="smartscreen__warn">「詳細情報」を押さずにこの画面を閉じると、インストールは始まりません。その場合は、ダウンロードしたファイルをもう一度ダブルクリックしてやり直してください。</p>
           </div>
         </details>
-        <p class="dl-note">macOS 版は macOS 11 (Big Sur) 以降に対応します。2021年以降に発売された Mac は Apple Silicon 版をお選びください。</p>
+        <p class="dl-note">macOS 版は macOS 12 (Monterey) 以降に対応します。2021年以降に発売された Mac は Apple Silicon 版をお選びください。</p>
       </div>
     </section>
 
@@ -267,6 +267,13 @@
         </div>
         <div class="changelog-list">
       <!-- リリースごとに最新を先頭へ追記する。version.json と内容を一致させる。 -->
+      <article>
+        <h3>v2.2.37</h3>
+        <ul>
+          <li>動作の土台（.NET）を、サポート期間の長い新しい版に入れ替えました。</li>
+          <li>この版から Mac 版は macOS 12 (Monterey) 以降が必要です。macOS 11 (Big Sur) をお使いの方は更新せず、そのまま v2.2.36 をお使いください。</li>
+        </ul>
+      </article>
       <article>
         <h3>v2.2.36</h3>
         <ul>
@@ -1157,7 +1164,7 @@
               }
               note.textContent = '2021年以降に発売された Mac は「Apple Silicon」をお選びください。' + otherOsNote;
               note.hidden = false;
-              document.getElementById('sysreq').textContent = 'macOS 11 (Big Sur) 以降';
+              document.getElementById('sysreq').textContent = 'macOS 12 (Monterey) 以降';
             } else {
               // mac 版が未配布（現状）: Windows ボタンを隠して「準備中」無効化ボタンを表示
               winBtn.hidden = true;
@@ -1165,7 +1172,7 @@
               document.getElementById('mac-pending-btn').hidden = false;
               note.textContent = otherOsNote;
               note.hidden = false;
-              document.getElementById('sysreq').textContent = 'macOS 11 (Big Sur) 以降（近日提供予定）';
+              document.getElementById('sysreq').textContent = 'macOS 12 (Monterey) 以降（近日提供予定）';
             }
           }
         })
