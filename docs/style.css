@@ -653,5 +653,7 @@ strong { font-weight: 700; color: var(--color-ink); }
 
 /* Store 版を主役にしたので、インストーラー版は小さな文字リンクで添える（ボタンにしない）。 */
 .cta__alt { margin: var(--space-3) 0 0; font-size: var(--size-small); color: var(--color-ink-muted); }
+/* 説明の段落のすぐ下・ボタンの上に置く注記（お試しでは使えない機能）。ボタンとのあいだを、説明→ボタンと同じだけ空ける。 */
+.cta__alt--before-actions { margin-bottom: var(--space-4); }
 .alt-link a { text-decoration: underline; text-underline-offset: 3px; }
 .alt-link[hidden] { display: none; }

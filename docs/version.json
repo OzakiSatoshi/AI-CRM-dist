@@ -1,11 +1,11 @@
 {
-  "version": "2.2.37",
-  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.37/AI-CRM-Setup-v2.2.37.exe",
+  "version": "2.3.0",
+  "downloadUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.3.0/AI-CRM-Setup-v2.3.0.exe",
   "releasesUrl": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/latest",
-  "releaseNotes": "動作の土台（.NET）を、サポート期間の長い新しい版に入れ替えました。この版から Mac 版は macOS 12 (Monterey) 以降が必要です。macOS 11 (Big Sur) をお使いの方は更新せず、そのまま v2.2.36 をお使いください。",
+  "releaseNotes": "設定の画面と、取り込みの入口が新しくなりました。設定は左の一覧から選ぶ形に、取り込みは「名刺を読み取る」と「名簿・データを取り込む」の 2 つになりました。設定した内容はそのまま引き継がれます。前の場所との対応は、「マニュアルを開く」からご覧ください。",
   "downloads": {
-    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.37/AI-CRM-Setup-v2.2.37.exe" },
-    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.37/Enishi-v2.2.37-mac-arm64.dmg" },
-    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.2.37/Enishi-v2.2.37-mac-x64.dmg" }
+    "win": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.3.0/AI-CRM-Setup-v2.3.0.exe" },
+    "mac-arm64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.3.0/Enishi-v2.3.0-mac-arm64.dmg" },
+    "mac-x64": { "url": "https://github.com/OzakiSatoshi/AI-CRM-dist/releases/download/v2.3.0/Enishi-v2.3.0-mac-x64.dmg" }
   }
 }
